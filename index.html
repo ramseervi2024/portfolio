@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramesh Seervi | Full-Stack Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-hover: #4338ca;
+            --secondary: #0ea5e9;
+            --bg-color: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #10b981;
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(79, 70, 229, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(14, 165, 233, 0.15) 0px, transparent 50%);
+            background-attachment: fixed;
+            color: var(--text-main);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 2rem;
+        }
+
+        /* Glassmorphism Classes */
+        .glass {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .glass:hover {
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Sidebar / Profile */
+        .sidebar {
+            position: sticky;
+            top: 2rem;
+            height: max-content;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            box-shadow: 0 0 20px rgba(79, 70, 229, 0.4);
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(to right, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .role {
+            color: var(--secondary);
+            font-weight: 500;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            letter-spacing: 1px;
+        }
+
+        .contact-list {
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .contact-item i {
+            color: var(--primary);
+            font-size: 1.2rem;
+            width: 20px;
+            text-align: center;
+        }
+
+        .contact-item a {
+            color: var(--text-main);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-item a:hover {
+            color: var(--secondary);
+        }
+
+        /* Main Content */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: #fff;
+        }
+
+        h2 i {
+            color: var(--primary);
+        }
+
+        .summary-text {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        /* Skills Tags */
+        .skills-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .skill-tag {
+            background: rgba(79, 70, 229, 0.1);
+            border: 1px solid rgba(79, 70, 229, 0.3);
+            color: #e2e8f0;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .skill-tag:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
+        }
+
+        /* Timeline / Experience */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary), transparent);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -37px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--primary);
+            box-shadow: 0 0 10px var(--primary);
+            border: 3px solid var(--bg-color);
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .job-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .job-date {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--secondary);
+            font-weight: 500;
+        }
+
+        .job-company {
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-item ul {
+            list-style: none;
+            color: var(--text-muted);
+        }
+
+        .timeline-item ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .timeline-item ul li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-5px);
+            border-color: var(--secondary);
+        }
+
+        .project-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .project-title i {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .project-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                position: relative;
+                top: 0;
+            }
+            .contact-list {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 1rem;
+            }
+            .timeline-header {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .contact-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar glass">
+        <div class="profile-img">
+            <i class="fa-solid fa-code"></i>
+        </div>
+        <h1>Ramesh Seervi</h1>
+        <div class="role">Full-Stack JavaScript Developer</div>
+
+        <div class="contact-list">
+            <div class="contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Electronic City, Bangalore</span>
+            </div>
+            <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <span>+91 6360494477</span>
+            </div>
+            <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:ramseervi4321@gmail.com">ramseervi4321@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <i class="fa-brands fa-github"></i>
+                <a href="https://github.com/ramseervi2024" target="_blank">github.com/ramseervi2024</a>
+            </div>
+            <div class="contact-item">
+                <i class="fa-brands fa-linkedin"></i>
+                <a href="https://www.linkedin.com/in/ramesh-seervi-3976802b0/" target="_blank">LinkedIn Profile</a>
+            </div>
+            <div class="contact-item">
+                <i class="fa-solid fa-folder-open"></i>
+                <a href="https://drive.google.com/file/d/1SMA6ouALJ9uzKEm-zFy-EbtYbQ5_N4l2/view?usp=sharing" target="_blank">View Portfolio / Drive</a>
+            </div>
+        </div>
+
+        <div style="text-align: left;">
+            <h3 style="color: white; margin-bottom: 1rem; font-size: 1.1rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem;">Education</h3>
+            <div style="margin-bottom: 1rem;">
+                <h4 style="color: var(--secondary); font-size: 0.95rem;">B.E. in Computer Science</h4>
+                <p style="color: var(--text-muted); font-size: 0.85rem;">Bangalore Institute of Technology</p>
+                <p style="color: var(--text-muted); font-size: 0.85rem;">2018 - 2022 | CGPA: 8.2/10</p>
+            </div>
+        </div>
+    </aside>
+
+    <!-- RIGHT MAIN CONTENT -->
+    <main class="main-content">
+        
+        <!-- About Section -->
+        <section class="glass">
+            <h2><i class="fa-solid fa-user-astronaut"></i> About Me</h2>
+            <p class="summary-text">
+                Full-Stack JavaScript Developer with <strong>3.7+ years of experience</strong> building end-to-end web and cross-platform mobile applications. Expertise in the MERN stack (MongoDB, Express, React, Node.js) and React Native. Experienced in developing scalable, high-performance platforms for e-commerce, event management, and workforce management. Proven ability to deliver secure REST APIs, real-time data handling, and complex third-party integrations from development to deployment across Web, Android, and iOS.
+            </p>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="glass">
+            <h2><i class="fa-solid fa-microchip"></i> Tech Stack</h2>
+            <div class="skills-wrapper">
+                <div class="skill-tag">React.js</div>
+                <div class="skill-tag">React Native</div>
+                <div class="skill-tag">Node.js</div>
+                <div class="skill-tag">Express.js</div>
+                <div class="skill-tag">JavaScript</div>
+                <div class="skill-tag">TypeScript</div>
+                <div class="skill-tag">MongoDB</div>
+                <div class="skill-tag">Redux</div>
+                <div class="skill-tag">Firebase</div>
+                <div class="skill-tag">REST APIs</div>
+                <div class="skill-tag">HTML & CSS</div>
+                <div class="skill-tag">Git & GitHub</div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="glass">
+            <h2><i class="fa-solid fa-briefcase"></i> Work Experience</h2>
+            
+            <div class="timeline">
+                <!-- Job 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div class="job-title">Full-Stack & React Native Developer</div>
+                        <div class="job-date">Nov 2022 - Present</div>
+                    </div>
+                    <div class="job-company">Imcrinox | Bengaluru, India</div>
+                    <ul>
+                        <li><strong>Backend Architecture:</strong> Designed and developed robust RESTful APIs using Node.js and Express.js, handling complex data routing and user authentication.</li>
+                        <li><strong>Mobile Engineering:</strong> Developed and successfully deployed 4+ cross-platform React Native mobile applications to the Google Play Store and Apple App Store.</li>
+                        <li><strong>API & Integrations:</strong> Consumed REST APIs using Axios and TypeScript, significantly optimizing data payload and rendering speed.</li>
+                        <li><strong>Feature Implementation:</strong> Integrated Firebase (real-time DB, push notifications), Google Maps, deep linking, and secure payment gateways to enhance user interactivity.</li>
+                    </ul>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div class="job-title">Web Developer Intern</div>
+                        <div class="job-date">Feb 2022 – Oct 2022</div>
+                    </div>
+                    <div class="job-company">Gridrnd | Bengaluru, India</div>
+                    <ul>
+                        <li><strong>Full-Stack Development:</strong> Built and maintained backend services utilizing Node.js, Express.js, and MongoDB.</li>
+                        <li><strong>UI/UX Implementation:</strong> Developed responsive, interactive web interfaces using React.js, Redux, HTML, CSS, and JavaScript.</li>
+                        <li><strong>Testing & Optimization:</strong> Integrated RESTful APIs using Axios, extensively testing endpoints with Postman to ensure high reliability.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="glass">
+            <h2><i class="fa-solid fa-rocket"></i> Key Projects</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <div class="project-title">
+                        Ondeen & Bukih (Mobile) <i class="fa-brands fa-react"></i>
+                    </div>
+                    <p class="project-desc">
+                        Cross-platform e-commerce and event booking mobile applications in React Native. Integrated Apple Pay, Google Pay, Visa/Mastercard. Features interactive calendar views and complex cart logic.
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">
+                        UrExpert (Web) <i class="fa-brands fa-node-js"></i>
+                    </div>
+                    <p class="project-desc">
+                        A robust remote work/freelancing web platform. Engineered role-based access control, personalized user dashboards, and secure backend processing for product auctions and team collaboration.
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">
+                        Organiser App (Mobile) <i class="fa-brands fa-react"></i>
+                    </div>
+                    <p class="project-desc">
+                        Event management tool featuring live ticket scanning, real-time announcements, speaker management, and secure digital wallet integration for seamless organizer operations.
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">
+                        Venderlane (Web) <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <p class="project-desc">
+                        B2B e-commerce hub allowing vendors to list products, manage inventory in real-time, and process bulk orders with secure payment pipelines and role-based buyer/seller access.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+</div>
+
+</body>
+</html>
