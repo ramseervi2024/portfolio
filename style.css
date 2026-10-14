@@ -735,9 +735,9 @@ nav#navbar.scrolled {
 /* Hero Title */
 .hero-title {
     font-family: 'Atavian', serif;
-    font-size: clamp(1.8rem, 3.1vw, 2.75rem);
+    font-size: clamp(1.6rem, 2.55vw, 2.35rem);
     font-weight: 700; letter-spacing: -0.5px;
-    line-height: 1.18; margin-bottom: 28px;
+    line-height: 1.2; margin-bottom: 28px;
     text-transform: uppercase;
     color: var(--text-primary);
 }
