@@ -9,46 +9,46 @@
     --font-main: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
 
-    /* High-Contrast Light Theme Palette */
-    --bg-color: #f8fafc;
+    /* Gust Editorial Warm Neutral Palette */
+    --bg-color: #fbf9f5;
     --bg-alt: #ffffff;
     --surface-color: #ffffff;
-    --surface-border: #e2e8f0;
-    --surface-border-hover: #cbd5e1;
-    --surface-border-subtle: #f1f5f9;
+    --surface-border: #e8e4dc;
+    --surface-border-hover: #d8d2c4;
+    --surface-border-subtle: #f2efe9;
 
-    --text-primary: #0f172a;       /* Deep Slate Black - 100% Crisp Visibility */
-    --text-secondary: #475569;     /* Readable Neutral Slate */
-    --text-muted: #64748b;         /* Crisp Muted Slate */
+    --text-primary: #18181b;       /* Deep Obsidian Slate - 100% Crisp Visibility */
+    --text-secondary: #4b4845;     /* Readable Neutral Warm Slate */
+    --text-muted: #736f69;         /* Crisp Muted Warm Slate */
 
-    /* Premium Accents */
-    --accent: #0066ff;             /* Modern Electric Royal Sapphire */
+    /* Premium Accents & Behance Pro Colors */
+    --accent: #0052ff;             /* Vibrant Royal Electric Sapphire */
     --accent-cyan: #0284c7;        /* Clean Cyan */
     --accent-emerald: #059669;     /* Verified Green */
-    --accent-gradient: linear-gradient(135deg, #0066ff 0%, #0284c7 100%);
+    --accent-gradient: linear-gradient(135deg, #0052ff 0%, #0284c7 100%);
 
     --card-bg: #ffffff;
-    --card-border: #e2e8f0;
-    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-    --card-shadow-hover: 0 16px 36px rgba(0, 0, 0, 0.08);
+    --card-border: #e8e4dc;
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.035);
+    --card-shadow-hover: 0 16px 36px rgba(0, 0, 0, 0.075);
 
-    --nav-bg: rgba(248, 250, 252, 0.92);
+    --nav-bg: rgba(251, 249, 245, 0.94);
 
     /* Behance Pro Signature Buttons */
-    --btn-primary-bg: #0f172a;
+    --btn-primary-bg: #18181b;
     --btn-primary-text: #ffffff;
     --btn-secondary-bg: #ffffff;
-    --btn-secondary-border: #cbd5e1;
-    --btn-secondary-text: #0f172a;
+    --btn-secondary-border: #d8d2c4;
+    --btn-secondary-text: #18181b;
 
-    --grid-line: rgba(15, 23, 42, 0.035);
-    --badge-bg: #f1f5f9;
-    --badge-border: #e2e8f0;
+    --grid-line: rgba(28, 25, 23, 0.032);
+    --badge-bg: #f2efe9;
+    --badge-border: #e8e4dc;
     --contact-wrap-bg: #ffffff;
     --process-bg: #ffffff;
 
-    --mockup-line: #e2e8f0;
-    --mockup-line-light: #f1f5f9;
+    --mockup-line: #e8e4dc;
+    --mockup-line-light: #f5f2eb;
 }
 
 /* === RESET & BASE === */
@@ -495,9 +495,35 @@ nav#navbar.scrolled {
     display: block;
 }
 
+@keyframes heroLineReveal {
+    from {
+        transform: translateY(105%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes heroFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .hero-title .line-inner {
     display: block;
-    transform: translateY(105%);
+    animation: heroLineReveal 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-title .line:nth-child(2) .line-inner {
+    animation-delay: 0.1s;
 }
 
 .hero-title .gradient {
@@ -513,9 +539,8 @@ nav#navbar.scrolled {
     max-width: 580px;
     line-height: 1.75;
     margin-bottom: 32px;
-    opacity: 0;
-    transform: translateY(24px);
     font-weight: 400;
+    animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
 }
 
 /* Hero Metrics Strip — 100% Crisp Visibility */
@@ -1865,5 +1890,329 @@ footer {
         padding: 0;
         justify-content: center;
         border-radius: 50%;
+    }
+}
+
+/* ==========================================================================
+   BEHANCE PRO & GUST EDITORIAL CARDS & COLOR BANNER BOXES
+   Fast loading, pure CSS, hardware-accelerated
+   ========================================================================== */
+
+.behance-value-section {
+    padding: 100px 0 60px;
+    position: relative;
+}
+
+.behance-header {
+    text-align: center;
+    max-width: 820px;
+    margin: 0 auto 56px;
+}
+
+.behance-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.84rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    color: var(--accent);
+    margin-bottom: 14px;
+}
+
+.behance-title {
+    font-size: clamp(2.3rem, 4vw, 3.4rem);
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 1.15;
+    color: var(--text-primary);
+    margin-bottom: 18px;
+}
+
+.behance-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* 3-Column Card Box Grid */
+.behance-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-bottom: 44px;
+}
+
+.behance-card {
+    background: #ffffff;
+    border: 1px solid var(--surface-border);
+    border-radius: 24px;
+    padding: 42px 32px 36px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.035);
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s, border-color 0.28s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.behance-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border-color: var(--surface-border-hover);
+}
+
+/* Icon Badges with tinted border & glow */
+.bc-icon-badge {
+    width: 72px;
+    height: 72px;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    transition: transform 0.25s ease;
+}
+
+.behance-card:hover .bc-icon-badge {
+    transform: scale(1.1);
+}
+
+.bc-badge-blue {
+    background: rgba(0, 82, 255, 0.06);
+    border: 1.5px solid rgba(0, 82, 255, 0.35);
+    color: #0052ff;
+}
+
+.bc-badge-green {
+    background: rgba(16, 185, 129, 0.06);
+    border: 1.5px solid rgba(16, 185, 129, 0.35);
+    color: #059669;
+}
+
+.bc-badge-purple {
+    background: rgba(124, 58, 237, 0.06);
+    border: 1.5px solid rgba(124, 58, 237, 0.35);
+    color: #7c3aed;
+}
+
+.behance-card h3 {
+    font-size: 1.38rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    letter-spacing: -0.025em;
+}
+
+.behance-card p {
+    font-size: 0.96rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin-bottom: 24px;
+    flex: 1;
+}
+
+.bc-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.94rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-decoration: none;
+    transition: gap 0.2s, color 0.2s;
+}
+
+.behance-card:hover .bc-card-link {
+    gap: 10px;
+    color: #003dbb;
+}
+
+.behance-cta-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 70px;
+    flex-wrap: wrap;
+}
+
+/* Feature Spotlight Header Block (Screenshots 2 & 4) */
+.spotlight-header-block {
+    text-align: center;
+    max-width: 860px;
+    margin: 80px auto 36px;
+}
+
+.spotlight-icon-badge {
+    width: 64px;
+    height: 64px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.spotlight-category {
+    font-size: 0.88rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 14px;
+}
+
+.spotlight-cat-blue { color: #0052ff; }
+.spotlight-cat-green { color: #059669; }
+.spotlight-cat-purple { color: #7c3aed; }
+
+.spotlight-headline {
+    font-size: clamp(2.1rem, 3.6vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.18;
+    color: var(--text-primary);
+    margin-bottom: 26px;
+}
+
+.spotlight-btn-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 32px;
+    border-radius: 9999px;
+    background: #18181b;
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: 0.96rem;
+    text-decoration: none;
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+}
+
+.spotlight-btn-pill:hover {
+    background: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.16);
+}
+
+/* High-Impact Color Stat Banner Boxes (Screenshots 3 & 4) */
+.color-banner-card {
+    border-radius: 26px;
+    padding: 46px 54px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 36px;
+    position: relative;
+    overflow: hidden;
+    margin: 28px 0 60px;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s;
+}
+
+.color-banner-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.15);
+}
+
+/* Subtle organic glowing ambient disc */
+.color-banner-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 360px;
+    height: 360px;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+    pointer-events: none;
+    border-radius: 50%;
+}
+
+/* Blue Banner (Screenshot 3) */
+.banner-blue {
+    background: linear-gradient(135deg, #0050ee 0%, #0066ff 100%);
+}
+
+/* Green Banner (Screenshot 4) */
+.banner-green {
+    background: linear-gradient(135deg, #047857 0%, #0da13c 100%);
+}
+
+/* Purple Banner */
+.banner-purple {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+}
+
+.banner-stat {
+    font-size: clamp(3.6rem, 5.2vw, 5rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: #ffffff;
+    flex-shrink: 0;
+    font-family: var(--font-main);
+}
+
+.banner-content {
+    flex: 1;
+    font-size: clamp(1.08rem, 1.4vw, 1.25rem);
+    font-weight: 500;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.96);
+    max-width: 680px;
+}
+
+.banner-content strong {
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.banner-cta-btn {
+    padding: 15px 34px;
+    border-radius: 9999px;
+    background: #ffffff;
+    color: #18181b !important;
+    font-weight: 700;
+    font-size: 0.98rem;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.banner-cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.25);
+    background: #fdfdfd;
+}
+
+@media (max-width: 900px) {
+    .behance-card-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .color-banner-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 34px 28px;
+        gap: 24px;
+    }
+    .banner-stat {
+        font-size: 3.4rem;
+    }
+    .banner-cta-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    .behance-value-section {
+        padding: 70px 0 40px;
     }
 }

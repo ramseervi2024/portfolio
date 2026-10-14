@@ -130,8 +130,8 @@ mobLinks.forEach(link => {
 // Scroll Reveal Animation (Intersection Observer)
 const reveals = document.querySelectorAll('.reveal');
 const revealOptions = {
-    threshold: 0.15,
-    rootMargin: "0px 0px -50px 0px"
+    threshold: 0.02,
+    rootMargin: "0px 0px 120px 0px"
 };
 
 const revealOnScroll = new IntersectionObserver(function(entries, observer) {
