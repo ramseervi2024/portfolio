@@ -30,42 +30,11 @@ if (typeof gsap !== 'undefined') {
     }, "-=0.6");
 }
 
-// Theme Toggle Logic
-const themeToggleBtn = document.getElementById('theme-toggle');
-const sunIcon = document.querySelector('.sun-icon');
-const moonIcon = document.querySelector('.moon-icon');
-
-const savedTheme = localStorage.getItem('theme');
-const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-
-const setTheme = (theme) => {
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-    if (theme === 'light') {
-        if (sunIcon) sunIcon.style.display = 'none';
-        if (moonIcon) moonIcon.style.display = 'block';
-    } else {
-        if (sunIcon) sunIcon.style.display = 'block';
-        if (moonIcon) moonIcon.style.display = 'none';
-    }
-};
-
-if (savedTheme) {
-    setTheme(savedTheme);
-} else {
-    setTheme('dark');
-}
-
-if (themeToggleBtn) {
-    themeToggleBtn.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        if (currentTheme === 'dark') {
-            setTheme('light');
-        } else {
-            setTheme('dark');
-        }
-    });
-}
+// Pure Light Theme Mode
+document.documentElement.setAttribute('data-theme', 'light');
+try {
+    localStorage.setItem('theme', 'light');
+} catch (e) {}
 
 // Custom Cursor (Only active on desktop, CSS hides it on mobile)
 const cursor = document.querySelector('.custom-cursor');
