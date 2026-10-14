@@ -52,8 +52,6 @@ const setTheme = (theme) => {
 
 if (savedTheme) {
     setTheme(savedTheme);
-} else if (systemPrefersLight) {
-    setTheme('light');
 } else {
     setTheme('dark');
 }
