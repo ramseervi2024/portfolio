@@ -2135,8 +2135,9 @@
               <div class="form-group">
                 <label for="pitch-role">Target Role Focus</label>
                 <select id="pitch-role" class="form-input" onchange="generateCustomPitch()">
-                  <option value="rn">React Native Mobile Specialist (Highly Recommended)</option>
-                  <option value="fullstack">Full Stack Developer (React Native + React + Node)</option>
+                  <option value="java" selected>Java Spring Boot Backend Developer (Highly Recommended)</option>
+                  <option value="fullstack">Full Stack Developer (Java Spring Boot + React / React Native)</option>
+                  <option value="rn">React Native Mobile Specialist</option>
                   <option value="react">React.js Frontend Engineer</option>
                   <option value="node">Node.js Backend Developer</option>
                 </select>
@@ -2325,12 +2326,12 @@
               </div>
             </div>
 
-            <div class="deck-card shortcut-copy-card" onclick="copyDeckValue('React Native, React.js, JavaScript, TypeScript, Node.js, Express.js, Redux, Redux Toolkit, Firebase, Axios, REST APIs, MongoDB, HTML5, CSS3, Git, Postman, Xcode, Android Studio', 'Skills List')">
+            <div class="deck-card shortcut-copy-card" onclick="copyDeckValue('Java 17/21, Spring Boot 3.x, Spring Data JPA, Hibernate ORM, Spring Security, JWT, RESTful APIs, MySQL, Apache Kafka, Docker, Kubernetes, AWS, Microservices, React.js, React Native, TypeScript, Git, Postman, Maven', 'Skills List')">
               <div class="deck-card-hdr">
                 <span class="deck-label">Skills (Comma-Separated)</span>
                 <span class="shortcut-badge">Alt + 9</span>
               </div>
-              <div class="deck-value">React Native, React.js, JS, TS, Node, MongoDB...</div>
+              <div class="deck-value">Java 17/21, Spring Boot, MySQL, Kafka, Docker, React...</div>
               <div class="deck-copy-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
               </div>
@@ -2396,9 +2397,9 @@
               <div class="deck-value">Strong Full Stack SE, scalable products...</div>
             </div>
 
-            <div class="deck-card" onclick="copyDeckValue('Full Stack Developer, React Native Developer, React.js Developer, Software Engineer, Mobile Engineer, or Backend Developer.', 'Preferred role')">
+            <div class="deck-card" onclick="copyDeckValue('Java Spring Boot Backend Developer, Full Stack Developer, Java Developer, Microservices Engineer, or React Native Developer.', 'Preferred role')">
               <div class="deck-card-hdr"><span class="deck-label">Preferred role</span></div>
-              <div class="deck-value">Full Stack / React Native / React.js...</div>
+              <div class="deck-value">Java Spring Boot / Full Stack / Backend...</div>
             </div>
 
             <div class="deck-card" onclick="copyDeckValue('Bengaluru (Open to Remote, Hybrid, or Relocation).', 'Preferred location')">
@@ -2428,9 +2429,9 @@
               <div class="deck-value">Hands-on experience, end-to-end...</div>
             </div>
 
-            <div class="deck-card" onclick="copyDeckValue('Develop and maintain React Native mobile applications and React.js web applications, build and integrate REST APIs, collaborate with cross-functional teams, optimize application performance, fix production issues, deploy applications to Google Play Store and Apple App Store, and contribute across frontend, mobile, and backend development.', 'Current Responsibilities')">
+            <div class="deck-card" onclick="copyDeckValue('Architect and develop scalable backend microservices with Java 17/21, Spring Boot 3.x, and MySQL; design secure RESTful APIs with JWT authentication; build event streaming with Apache Kafka; develop responsive web & mobile apps using React.js and React Native; containerize services with Docker; deploy and maintain cloud infrastructure.', 'Current Responsibilities')">
               <div class="deck-card-hdr"><span class="deck-label">Current Responsibilities</span></div>
-              <div class="deck-value">Develop and maintain mobile/web apps...</div>
+              <div class="deck-value">Java Spring Boot microservices, APIs, Kafka, React...</div>
             </div>
 
             <div class="deck-card" onclick="copyDeckValue('12th (Science) from Government Senior Secondary School, Sojat City, RBSE (Batch: 2017–2018).', '12th Summary')">
@@ -2595,12 +2596,12 @@
             <!-- Category Pills -->
             <div class="pills-container">
               <button class="pill active" onclick="filterCategory('all', this)">All Questions</button>
+              <button class="pill" onclick="filterCategory('java', this)">Java & Spring Boot</button>
+              <button class="pill" onclick="filterCategory('tech', this)">Microservices & DB</button>
               <button class="pill" onclick="filterCategory('rn', this)">React Native</button>
               <button class="pill" onclick="filterCategory('react', this)">React JS</button>
-              <button class="pill" onclick="filterCategory('node', this)">Node & DB</button>
               <button class="pill" onclick="filterCategory('js', this)">JS & TS Core</button>
               <button class="pill" onclick="filterCategory('hr', this)">HR & Profile</button>
-              <button class="pill" onclick="filterCategory('tech', this)">Architecture</button>
               <button class="pill" onclick="filterCategory('team', this)">Team / Collaboration</button>
               <button class="pill" onclick="filterCategory('soft', this)">Behavioral</button>
               <button class="pill" onclick="filterCategory('qa', this)">Process / Delivery</button>
@@ -2630,7 +2631,7 @@
           <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:12px;">Paste a full job description below. The tool will instantly compare it against your skill set, highlight keyword matches & gaps, and suggest tailored resume bullet points.</p>
 
           <textarea class="ats-jd-input" id="ats-jd-input" placeholder="Paste the full job description here...
-Example: We are looking for a React Native developer with experience in TypeScript, GraphQL, Jest, CI/CD pipelines, Redux Toolkit, Firebase..."></textarea>
+Example: We are looking for a Java Spring Boot developer with experience in Java 17/21, Spring Boot 3, Microservices, Spring Data JPA, Hibernate, MySQL, Kafka, Docker, and React..."></textarea>
 
           <div style="display:flex;gap:10px;margin-top:12px;flex-wrap:wrap;">
             <button class="btn btn-primary" onclick="runATSMatcher()">
@@ -2699,7 +2700,7 @@ Example: We are looking for a React Native developer with experience in TypeScri
             </div>
             <div class="form-group" style="margin:0">
               <label>Target Role</label>
-              <input type="text" id="seq-role" class="form-input" placeholder="e.g. React Native Dev" oninput="buildSequences()">
+              <input type="text" id="seq-role" class="form-input" placeholder="e.g. Java Spring Boot Developer" oninput="buildSequences()">
             </div>
           </div>
 
@@ -2755,9 +2756,10 @@ Example: We are looking for a React Native developer with experience in TypeScri
           <!-- Category selector -->
           <div class="mock-category-row">
             <button class="pill active" onclick="setMockCategory('all', this)">All</button>
+            <button class="pill" onclick="setMockCategory('java', this)">Java & Spring Boot</button>
+            <button class="pill" onclick="setMockCategory('tech', this)">Microservices</button>
             <button class="pill" onclick="setMockCategory('rn', this)">React Native</button>
             <button class="pill" onclick="setMockCategory('react', this)">React JS</button>
-            <button class="pill" onclick="setMockCategory('node', this)">Node & DB</button>
             <button class="pill" onclick="setMockCategory('js', this)">JS & TS</button>
             <button class="pill" onclick="setMockCategory('hr', this)">HR & Profile</button>
           </div>
@@ -3695,7 +3697,7 @@ I came across the {{role}} opening at {{company}} and I'm very interested..."></
 
       <div class="form-group">
         <label for="modal-role">Role Title *</label>
-        <input type="text" id="modal-role" class="form-input" placeholder="e.g. React Native Developer">
+        <input type="text" id="modal-role" class="form-input" placeholder="e.g. Java Spring Boot Developer">
       </div>
 
       <div class="form-row">
@@ -3984,6 +3986,42 @@ I came across the {{role}} opening at {{company}} and I'm very interested..."></
         answer: "Yes, assisted teammates & code reviews"
       },
       {
+        category: 'java',
+        categoryName: 'Java & Spring Boot',
+        question: 'How does Spring Boot auto-configuration and @SpringBootApplication work?',
+        answer: "@SpringBootApplication combines @Configuration, @EnableAutoConfiguration, and @ComponentScan. Auto-configuration works by reading spring.factories / AutoConfiguration.imports in starter libraries. Under the hood, conditional annotations like @ConditionalOnClass, @ConditionalOnMissingBean, and @ConditionalOnProperty evaluate the classpath and bean registry to automatically configure components (like DataSource, DispatcherServlet, Jackson) with sane defaults."
+      },
+      {
+        category: 'java',
+        categoryName: 'Java & Spring Boot',
+        question: 'Explain the Spring MVC Request Lifecycle and DispatcherServlet.',
+        answer: "1. The incoming HTTP request is intercepted by the DispatcherServlet (Front Controller).\n2. DispatcherServlet queries HandlerMapping to find the corresponding Controller and method.\n3. The HandlerAdapter executes the Controller logic.\n4. In REST APIs, the @ResponseBody annotation triggers HttpMessageConverter (e.g. Jackson) to serialize the Java model directly into JSON response stream."
+      },
+      {
+        category: 'java',
+        categoryName: 'Java & Spring Boot',
+        question: 'How do you handle database transactions and rollbacks using @Transactional in Spring Boot?',
+        answer: "Spring uses Spring AOP proxies around @Transactional methods. When a method starts, a transaction context is opened or joined (controlled by Propagation, e.g. REQUIRED). If an unchecked exception (RuntimeException or Error) is thrown, Spring triggers a rollback. For checked exceptions, you must explicitly specify '@Transactional(rollbackFor = Exception.class)'. Self-invocation within the same class bypasses the proxy and does not trigger transactions unless AspectJ mode is used."
+      },
+      {
+        category: 'java',
+        categoryName: 'Java & Spring Boot',
+        question: 'What is the N+1 problem in Hibernate / Spring Data JPA and how do you resolve it?',
+        answer: "The N+1 problem occurs when fetching an entity with lazy-loaded relationships; Hibernate executes 1 query to fetch the parents and N subsequent queries to fetch the children of each parent. Solutions include:\n1. Using 'JOIN FETCH' in JPQL queries.\n2. Specifying @EntityGraph on repository query methods.\n3. Using Hibernate batch fetching (@BatchSize(size = 25))."
+      },
+      {
+        category: 'java',
+        categoryName: 'Java & Spring Boot',
+        question: 'How do you implement stateless JWT authentication using Spring Security 6.x?',
+        answer: "1. Create a custom OncePerRequestFilter (e.g. JwtAuthenticationFilter) that parses the 'Bearer ' token from the Authorization header.\n2. Validate the JWT token signature and expiration with JJWT / Nimbus.\n3. Extract the username and roles, load the UserDetails, and set the SecurityContextHolder with UsernamePasswordAuthenticationToken.\n4. Configure SecurityFilterChain with sessionCreationPolicy(SessionCreationPolicy.STATELESS), disable CSRF, and authorize HTTP request patterns."
+      },
+      {
+        category: 'java',
+        categoryName: 'Java & Spring Boot',
+        question: 'How do you produce and consume events in Spring Boot using Apache Kafka?',
+        answer: "1. Use 'spring-kafka' starter.\n2. Producers: Inject 'KafkaTemplate<String, Object>' and call '.send(topic, key, payload)' which returns a CompletableFuture for asynchronous acknowledgment.\n3. Consumers: Annotate methods with '@KafkaListener(topics = \"topic-name\", groupId = \"group-id\")'.\n4. Error handling: Configure CommonErrorHandler or Dead Letter Queues (DLT) via @DltHandler to gracefully isolate failed records."
+      },
+      {
         category: 'rn',
         categoryName: 'React Native',
         question: 'How do you optimize FlatList performance for large datasets?',
@@ -4231,7 +4269,7 @@ I came across the {{role}} opening at {{company}} and I'm very interested..."></
           {
             id: 'mock1',
             company: 'Tech Startup Inc',
-            role: 'React Native Developer',
+            role: 'Java Spring Boot Backend Developer',
             status: 'leads',
             platform: 'Instahyre',
             contactName: 'Sumit CTO',
@@ -4352,24 +4390,21 @@ I came across the {{role}} opening at {{company}} and I'm very interested..."></
 
     // ── BANGALORE WALK-IN RADAR ──
     const WALKIN_SKILLS = [
+      { label: 'Java Spring Boot', icon: '☕', summary: 'Enterprise microservices, Spring Boot 3.x, Spring MVC, Security' },
+      { label: 'Spring Boot', icon: '🍃', summary: 'REST APIs, Data JPA, Hibernate, JWT, Maven & microservice patterns' },
+      { label: 'Java 17/21', icon: '☕', summary: 'Core Java, OOP, Collections, Concurrency, Stream API, JVM tuning' },
+      { label: 'Microservices', icon: '🧱', summary: 'Distributed services, Eureka, API Gateway, resilient architectures' },
+      { label: 'MySQL & Database', icon: '🐬', summary: 'SQL query optimization, indexes, transactions, Hibernate caching' },
+      { label: 'Apache Kafka', icon: '📨', summary: 'Event streaming, topic partitioning, producers & consumers' },
+      { label: 'Docker & AWS', icon: '🐳', summary: 'Containerization, EC2, S3, RDS, CI/CD deployment automation' },
       { label: 'React Native', icon: '📱', summary: 'Mobile apps, Expo, RN bridges, App Store / Play Store releases' },
       { label: 'React.js', icon: '⚛️', summary: 'Frontend architecture, hooks, performance, component systems' },
+      { label: 'REST APIs', icon: '🧾', summary: 'Resource design, pagination, error handling and contracts' },
       { label: 'JavaScript', icon: '🟨', summary: 'ES6+, closures, async/await, DOM and browser runtime' },
       { label: 'TypeScript', icon: '🔷', summary: 'Strong typing, interfaces, generics and scalable codebases' },
-      { label: 'Node.js', icon: '🟢', summary: 'Backend runtime, event loop, streams and service design' },
-      { label: 'Express.js', icon: '🚂', summary: 'RESTful services, middleware, auth and API engineering' },
-      { label: 'Redux', icon: '🧠', summary: 'State containers, reducers, actions and predictable data flow' },
       { label: 'Redux Toolkit', icon: '🧩', summary: 'Modern Redux patterns, slices and async thunks' },
-      { label: 'Firebase', icon: '🔥', summary: 'Realtime DB, auth, cloud functions and mobile backend patterns' },
-      { label: 'Axios', icon: '🌐', summary: 'HTTP clients, interceptors, retries and API integration' },
-      { label: 'REST APIs', icon: '🧾', summary: 'Resource design, pagination, error handling and contracts' },
-      { label: 'MongoDB', icon: '🍃', summary: 'Schema design, indexing and document-oriented data access' },
-      { label: 'HTML5', icon: '🌐', summary: 'Semantic markup, accessibility and modern browser APIs' },
-      { label: 'CSS3', icon: '🎨', summary: 'Layout, responsive design and modern styling systems' },
       { label: 'Git', icon: '🧵', summary: 'Branching, merge conflicts, pull requests and collaboration' },
-      { label: 'Postman', icon: '📮', summary: 'API testing, collections, environments and automation' },
-      { label: 'Xcode', icon: '🛠️', summary: 'iOS builds, signing, simulators and Apple ecosystem debugging' },
-      { label: 'Android Studio', icon: '🤖', summary: 'Android builds, emulators, Gradle and device testing' }
+      { label: 'Postman', icon: '📮', summary: 'API testing, collections, environments and automation' }
     ];
 
     function getWalkinDateValue(baseDate = new Date()) {
@@ -4394,24 +4429,21 @@ I came across the {{role}} opening at {{company}} and I'm very interested..."></
     }
 
     const WALKIN_DRIVES = [
+      { skill: 'Java Spring Boot', title: 'Java Spring Boot Walk-in Drive', company: 'Enterprise Cloud Solutions', venue: 'Outer Ring Road (Bellandur)', date: buildWalkinDriveDate(0), time: '10:00 AM', link: 'https://www.google.com/search?q=Java+Spring+Boot+walkin+interview+Bangalore' },
+      { skill: 'Spring Boot', title: 'Spring Boot Backend Walk-in', company: 'Global FinTech Hub', venue: 'Whitefield (ITPB)', date: buildWalkinDriveDate(1), time: '10:30 AM', link: 'https://www.google.com/search?q=Spring+Boot+walkin+interview+Bangalore' },
+      { skill: 'Java 17/21', title: 'Core Java & Backend Drive', company: 'Software Scale-up', venue: 'Electronic City Phase 1', date: buildWalkinDriveDate(0), time: '11:00 AM', link: 'https://www.google.com/search?q=Java+developer+walkin+Bangalore' },
+      { skill: 'Microservices', title: 'Microservices Architect Walk-in', company: 'Digital Systems Co.', venue: 'Koramangala', date: buildWalkinDriveDate(2), time: '09:30 AM', link: 'https://www.google.com/search?q=Microservices+developer+walkin+Bangalore' },
+      { skill: 'MySQL & Database', title: 'Backend & DB Walk-in Drive', company: 'Data Systems Ltd', venue: 'Indiranagar', date: buildWalkinDriveDate(3), time: '12:00 PM', link: 'https://www.google.com/search?q=Java+MySQL+walkin+Bangalore' },
+      { skill: 'Apache Kafka', title: 'Kafka & Distributed Systems Drive', company: 'Streaming Tech Hub', venue: 'Manyata Tech Park', date: buildWalkinDriveDate(4), time: '01:00 PM', link: 'https://www.google.com/search?q=Kafka+Spring+Boot+walkin+Bangalore' },
+      { skill: 'Docker & AWS', title: 'Cloud Backend & DevOps Drive', company: 'Cloud Operations Lab', venue: 'Marathahalli', date: buildWalkinDriveDate(1), time: '02:00 PM', link: 'https://www.google.com/search?q=Java+Docker+AWS+walkin+Bangalore' },
       { skill: 'React Native', title: 'React Native Walk-in Interview', company: 'Bengaluru Product Studio', venue: 'Electronic City', date: buildWalkinDriveDate(0), time: '10:00 AM', link: 'https://www.google.com/search?q=React+Native+walkin+interview+Bangalore' },
       { skill: 'React.js', title: 'React.js Frontend Drive', company: 'FinTech Startup', venue: 'Koramangala', date: buildWalkinDriveDate(1), time: '11:00 AM', link: 'https://www.google.com/search?q=React+js+walkin+Bangalore' },
+      { skill: 'REST APIs', title: 'REST API Developer Drive', company: 'Backend Product Team', venue: 'Outer Ring Road', date: buildWalkinDriveDate(5), time: '04:00 PM', link: 'https://www.google.com/search?q=REST+API+walkin+Bangalore' },
       { skill: 'JavaScript', title: 'JavaScript Interview Walk-in', company: 'Product Engineering Hub', venue: 'Marathahalli', date: buildWalkinDriveDate(2), time: '09:30 AM', link: 'https://www.google.com/search?q=JavaScript+walkin+Bangalore' },
       { skill: 'TypeScript', title: 'TypeScript Developer Walk-in', company: 'SaaS Scale-up', venue: 'Indiranagar', date: buildWalkinDriveDate(3), time: '12:00 PM', link: 'https://www.google.com/search?q=TypeScript+walkin+Bangalore' },
-      { skill: 'Node.js', title: 'Node.js Backend Walk-in', company: 'Cloud Platform Company', venue: 'Whitefield', date: buildWalkinDriveDate(4), time: '01:00 PM', link: 'https://www.google.com/search?q=Node.js+walkin+Bangalore' },
-      { skill: 'Express.js', title: 'Express.js API Drive', company: 'Startup Hiring Desk', venue: 'HSR Layout', date: buildWalkinDriveDate(0), time: '10:30 AM', link: 'https://www.google.com/search?q=Express.js+walkin+Bangalore' },
-      { skill: 'Redux', title: 'Redux State Management Walk-in', company: 'Frontend Studio', venue: 'BTM Layout', date: buildWalkinDriveDate(1), time: '11:30 AM', link: 'https://www.google.com/search?q=Redux+walkin+Bangalore' },
       { skill: 'Redux Toolkit', title: 'Redux Toolkit Hiring Drive', company: 'Modern Web Lab', venue: 'Jayanagar', date: buildWalkinDriveDate(2), time: '12:30 PM', link: 'https://www.google.com/search?q=Redux+Toolkit+walkin+Bangalore' },
-      { skill: 'Firebase', title: 'Firebase Mobile Drive', company: 'App Innovation Co.', venue: 'Bellandur', date: buildWalkinDriveDate(3), time: '02:00 PM', link: 'https://www.google.com/search?q=Firebase+walkin+Bangalore' },
-      { skill: 'Axios', title: 'Axios API Integration Walk-in', company: 'Integration Studio', venue: 'Manyata Tech Park', date: buildWalkinDriveDate(4), time: '03:00 PM', link: 'https://www.google.com/search?q=Axios+walkin+Bangalore' },
-      { skill: 'REST APIs', title: 'REST API Developer Drive', company: 'Backend Product Team', venue: 'Outer Ring Road', date: buildWalkinDriveDate(5), time: '04:00 PM', link: 'https://www.google.com/search?q=REST+API+walkin+Bangalore' },
-      { skill: 'MongoDB', title: 'MongoDB Database Walk-in', company: 'Data Platform Company', venue: 'Sarjapur Road', date: buildWalkinDriveDate(0), time: '09:00 AM', link: 'https://www.google.com/search?q=MongoDB+walkin+Bangalore' },
-      { skill: 'HTML5', title: 'HTML5 Frontend Walk-in', company: 'Digital Agency', venue: 'Kormangala', date: buildWalkinDriveDate(1), time: '10:00 AM', link: 'https://www.google.com/search?q=HTML5+walkin+Bangalore' },
-      { skill: 'CSS3', title: 'CSS3 UI Drive', company: 'Design Systems Team', venue: 'Domlur', date: buildWalkinDriveDate(2), time: '11:00 AM', link: 'https://www.google.com/search?q=CSS3+walkin+Bangalore' },
       { skill: 'Git', title: 'Git Collaboration Walk-in', company: 'Engineering Ops Company', venue: 'Rajajinagar', date: buildWalkinDriveDate(3), time: '12:00 PM', link: 'https://www.google.com/search?q=Git+walkin+Bangalore' },
-      { skill: 'Postman', title: 'Postman API Testing Drive', company: 'QA Engineering Studio', venue: 'Brookefield', date: buildWalkinDriveDate(4), time: '01:30 PM', link: 'https://www.google.com/search?q=Postman+walkin+Bangalore' },
-      { skill: 'Xcode', title: 'Xcode iOS Interview Walk-in', company: 'Mobile App Studio', venue: 'Electronic City', date: buildWalkinDriveDate(5), time: '02:30 PM', link: 'https://www.google.com/search?q=Xcode+walkin+Bangalore' },
-      { skill: 'Android Studio', title: 'Android Studio Walk-in', company: 'Android App Company', venue: 'Yelahanka', date: buildWalkinDriveDate(0), time: '03:30 PM', link: 'https://www.google.com/search?q=Android+Studio+walkin+Bangalore' }
+      { skill: 'Postman', title: 'Postman API Testing Drive', company: 'QA Engineering Studio', venue: 'Brookefield', date: buildWalkinDriveDate(4), time: '01:30 PM', link: 'https://www.google.com/search?q=Postman+walkin+Bangalore' }
     ];
 
     function renderWalkinRadar(selectedDate = null) {
@@ -4467,24 +4499,21 @@ I came across the {{role}} opening at {{company}} and I'm very interested..."></
     }
 
     const VIRTUAL_DRIVES = [
+      { skill: 'Java Spring Boot', title: 'Java Spring Boot Virtual Drive', company: 'Global Tech Delivery', venue: 'Online', date: buildWalkinDriveDate(0), time: '06:00 PM', link: 'https://www.google.com/search?q=Java+Spring+Boot+virtual+drive+Bangalore' },
+      { skill: 'Spring Boot', title: 'Spring Boot 3 & Microservices Drive', company: 'Enterprise Backend Team', venue: 'Online', date: buildWalkinDriveDate(1), time: '06:30 PM', link: 'https://www.google.com/search?q=Spring+Boot+virtual+drive+Bangalore' },
+      { skill: 'Java 17/21', title: 'Java Software Engineer Virtual Drive', company: 'Bangalore Core Engg', venue: 'Online', date: buildWalkinDriveDate(0), time: '07:00 PM', link: 'https://www.google.com/search?q=Java+virtual+hiring+drive+Bangalore' },
+      { skill: 'Microservices', title: 'Microservices & Cloud Virtual Screening', company: 'FinTech Platform', venue: 'Online', date: buildWalkinDriveDate(2), time: '07:30 PM', link: 'https://www.google.com/search?q=Microservices+virtual+drive+Bangalore' },
+      { skill: 'MySQL & Database', title: 'MySQL & DB Engineering Virtual Drive', company: 'Data Platform Company', venue: 'Online', date: buildWalkinDriveDate(3), time: '06:15 PM', link: 'https://www.google.com/search?q=Java+MySQL+virtual+drive+Bangalore' },
+      { skill: 'Apache Kafka', title: 'Kafka & Event Streaming Virtual Drive', company: 'Streaming Architecture Team', venue: 'Online', date: buildWalkinDriveDate(4), time: '08:00 PM', link: 'https://www.google.com/search?q=Kafka+Spring+Boot+virtual+drive+Bangalore' },
+      { skill: 'Docker & AWS', title: 'Docker, AWS & Backend Virtual Drive', company: 'Cloud Operations Firm', venue: 'Online', date: buildWalkinDriveDate(2), time: '07:15 PM', link: 'https://www.google.com/search?q=Docker+AWS+virtual+drive+Bangalore' },
       { skill: 'React Native', title: 'React Native Virtual Hiring Drive', company: 'Bengaluru Mobile Team', venue: 'Online', date: buildWalkinDriveDate(0), time: '06:00 PM', link: 'https://www.google.com/search?q=React+Native+virtual+drive+Bangalore' },
       { skill: 'React.js', title: 'React.js Online Interview Drive', company: 'Frontend Product Company', venue: 'Online', date: buildWalkinDriveDate(1), time: '07:00 PM', link: 'https://www.google.com/search?q=React+js+virtual+drive+Bangalore' },
+      { skill: 'REST APIs', title: 'REST API Virtual Developer Drive', company: 'Backend Product Team', venue: 'Online', date: buildWalkinDriveDate(4), time: '07:45 PM', link: 'https://www.google.com/search?q=REST+API+virtual+drive+Bangalore' },
       { skill: 'JavaScript', title: 'JavaScript Virtual Screening', company: 'Digital Engineering Firm', venue: 'Online', date: buildWalkinDriveDate(2), time: '06:30 PM', link: 'https://www.google.com/search?q=JavaScript+virtual+drive+Bangalore' },
       { skill: 'TypeScript', title: 'TypeScript Online Assessment Drive', company: 'SaaS Scale-up', venue: 'Online', date: buildWalkinDriveDate(3), time: '08:00 PM', link: 'https://www.google.com/search?q=TypeScript+virtual+drive+Bangalore' },
-      { skill: 'Node.js', title: 'Node.js Virtual Backend Drive', company: 'Cloud Platform Company', venue: 'Online', date: buildWalkinDriveDate(4), time: '06:45 PM', link: 'https://www.google.com/search?q=Node.js+virtual+drive+Bangalore' },
-      { skill: 'Express.js', title: 'Express.js Online API Drive', company: 'Startup Hiring Desk', venue: 'Online', date: buildWalkinDriveDate(5), time: '07:30 PM', link: 'https://www.google.com/search?q=Express.js+virtual+drive+Bangalore' },
-      { skill: 'Redux', title: 'Redux Virtual Frontend Drive', company: 'Frontend Studio', venue: 'Online', date: buildWalkinDriveDate(0), time: '06:00 PM', link: 'https://www.google.com/search?q=Redux+virtual+drive+Bangalore' },
       { skill: 'Redux Toolkit', title: 'Redux Toolkit Online Hiring', company: 'Modern Web Lab', venue: 'Online', date: buildWalkinDriveDate(1), time: '07:15 PM', link: 'https://www.google.com/search?q=Redux+Toolkit+virtual+drive+Bangalore' },
-      { skill: 'Firebase', title: 'Firebase Mobile Virtual Drive', company: 'App Innovation Co.', venue: 'Online', date: buildWalkinDriveDate(2), time: '08:15 PM', link: 'https://www.google.com/search?q=Firebase+virtual+drive+Bangalore' },
-      { skill: 'Axios', title: 'Axios API Integration Online Drive', company: 'Integration Studio', venue: 'Online', date: buildWalkinDriveDate(3), time: '06:15 PM', link: 'https://www.google.com/search?q=Axios+virtual+drive+Bangalore' },
-      { skill: 'REST APIs', title: 'REST API Virtual Developer Drive', company: 'Backend Product Team', venue: 'Online', date: buildWalkinDriveDate(4), time: '07:45 PM', link: 'https://www.google.com/search?q=REST+API+virtual+drive+Bangalore' },
-      { skill: 'MongoDB', title: 'MongoDB Virtual Database Drive', company: 'Data Platform Company', venue: 'Online', date: buildWalkinDriveDate(5), time: '06:30 PM', link: 'https://www.google.com/search?q=MongoDB+virtual+drive+Bangalore' },
-      { skill: 'HTML5', title: 'HTML5 Online Frontend Drive', company: 'Digital Agency', venue: 'Online', date: buildWalkinDriveDate(0), time: '07:00 PM', link: 'https://www.google.com/search?q=HTML5+virtual+drive+Bangalore' },
-      { skill: 'CSS3', title: 'CSS3 Virtual UI Drive', company: 'Design Systems Team', venue: 'Online', date: buildWalkinDriveDate(1), time: '08:00 PM', link: 'https://www.google.com/search?q=CSS3+virtual+drive+Bangalore' },
       { skill: 'Git', title: 'Git Collaboration Virtual Drive', company: 'Engineering Ops Company', venue: 'Online', date: buildWalkinDriveDate(2), time: '06:45 PM', link: 'https://www.google.com/search?q=Git+virtual+drive+Bangalore' },
-      { skill: 'Postman', title: 'Postman API Testing Virtual Drive', company: 'QA Engineering Studio', venue: 'Online', date: buildWalkinDriveDate(3), time: '07:30 PM', link: 'https://www.google.com/search?q=Postman+virtual+drive+Bangalore' },
-      { skill: 'Xcode', title: 'Xcode iOS Virtual Interview Drive', company: 'Mobile App Studio', venue: 'Online', date: buildWalkinDriveDate(4), time: '08:30 PM', link: 'https://www.google.com/search?q=Xcode+virtual+drive+Bangalore' },
-      { skill: 'Android Studio', title: 'Android Studio Virtual Drive', company: 'Android App Company', venue: 'Online', date: buildWalkinDriveDate(5), time: '07:45 PM', link: 'https://www.google.com/search?q=Android+Studio+virtual+drive+Bangalore' }
+      { skill: 'Postman', title: 'Postman API Testing Virtual Drive', company: 'QA Engineering Studio', venue: 'Online', date: buildWalkinDriveDate(3), time: '07:30 PM', link: 'https://www.google.com/search?q=Postman+virtual+drive+Bangalore' }
     ];
 
     function renderVirtualRadar(selectedDate = null) {
@@ -4840,6 +4869,65 @@ I came across the {{role}} opening at {{company}} and I'm very interested..."></
 
     // ── PITCH BUILDER ENGINE ──
     const PITCH_TEMPLATES = {
+      'java': {
+        subject: "Java Spring Boot Backend Developer (4+ YOE) | Microservices, MySQL, Kafka, Docker | Immediate Joiner",
+        cto: `Hi [Name],
+
+I noticed that [Company] is scaling its backend engineering infrastructure. I'm reaching out directly because I specialize in enterprise Java 17/21, Spring Boot 3.x, Spring Data JPA, Hibernate, MySQL, Apache Kafka, and Docker, and I can contribute to your high-throughput microservices from Day 1.
+
+I have 4+ years of hands-on experience designing robust RESTful microservices. I focus heavily on database performance (Spring Data JPA indexing, transactional management, complex query optimization) and application security (Spring Security, JWT authentication, RBAC, input validation, and containerization with Docker & AWS).
+
+Live enterprise backend services I have engineered:
+• Ondeen Backend: Spring Boot 3.x microservices, JWT authentication, MySQL transactions, and payment gateway webhooks.
+• UrExpert Services: High-concurrency booking endpoints with Redis cache & JPA repository optimizations.
+• Organiser Platform: Kafka event queues for ticket scanning validations and role-based access control.
+
+My references:
+• Resume: [Resume Link]
+• Video Pitch: [Video Link]
+• GitHub: [GitHub Link]
+
+I am an immediate joiner (0 days notice) based in Electronic City, Bangalore. Would you have 10 minutes for a brief technical call this week?
+
+Best,
+Ramesh Seervi
++91 6360494477`,
+        professional: `Dear [Name],
+
+I am writing to express my interest in Java Spring Boot Backend Developer opportunities at [Company]. With 4+ years of professional experience specializing in Java 17/21, Spring Boot 3.x, Spring Data JPA, Hibernate, MySQL, Apache Kafka, Docker, and RESTful microservices, I bring solid enterprise backend engineering capabilities that make me an immediate contributor.
+
+During my time at Imcrinox, I architected and maintained production microservices, optimized SQL queries and indexing to reduce query latency by 35%, configured stateless authentication via Spring Security and JWT, and implemented Kafka consumer/producer pipelines for asynchronous workflows.
+
+Summary:
+• Notice Period: Immediate Joiner (0 days notice)
+• Shareable Resume: [Resume Link]
+• Video Introduction: [Video Link]
+• GitHub Profile: [GitHub Link]
+
+I would appreciate the opportunity to discuss how my hands-on backend expertise aligns with your team's architecture goals.
+
+Best Regards,
+Ramesh Seervi
++91 6360494477`,
+        hr: `Hi [Name],
+
+I saw your posting for Java Spring Boot Developer opportunities. I am a backend software engineer with 4+ years of hands-on experience specializing in Java 17/21, Spring Boot 3.x, MySQL, Kafka, Docker, and REST APIs.
+
+I am based in Bangalore (Electronic City) and available to join immediately (0 days notice period).
+
+My profiles & details:
+• Current CTC: 8.5 LPA
+• Expected CTC: 12-16 LPA (Negotiable)
+• Notice Period: Immediate (0 days notice)
+• Resume Link: [Resume Link]
+• Video Introduction: [Video Link]
+
+I have engineered robust microservices, tuned database queries, integrated third-party payment APIs, and deployed containerized builds with Docker. I am ready to attend technical screening rounds immediately.
+
+Best Regards,
+Ramesh Seervi
++91 6360494477`
+      },
       'rn': {
         subject: "React Native Mobile Specialist (4+ YOE) - Shipped 4+ Apps - Immediate Joiner",
         cto: `Hi [Name],
