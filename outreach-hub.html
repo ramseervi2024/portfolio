@@ -1167,7 +1167,7 @@
           <div class="search-row">
             <div class="input-group">
               <label>Job Titles (OR)</label>
-              <input type="text" id="b-roles" value='"React Native" OR "React.js" OR "React Developer"'>
+              <input type="text" id="b-roles" value='"Java Spring Boot" OR "Spring Boot" OR "Java Developer" OR "Java Backend"'>
             </div>
             <div class="input-group">
               <label>Location/Status</label>
@@ -1207,7 +1207,7 @@
         </div>
         <div class="tpl-body">
           <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom: 12px;">X-Ray search LinkedIn to find
-            decision-makers hiring for React/React Native in Bangalore:</p>
+            decision-makers hiring for Java / Spring Boot in Bangalore:</p>
 
           <div style="display:flex; flex-direction:column; gap:12px;">
             <!-- Row 1 -->
@@ -1216,7 +1216,7 @@
               <span style="font-size:0.78rem; font-weight:700; color:var(--text-dim);">1. Tech Recruiters &amp; Talent
                 Acquisition (Bangalore)</span>
               <input type="text" class="platform-query-input" id="rec-bool-1" readonly
-                value='site:linkedin.com/in/ AND ("Technical Recruiter" OR "Talent Acquisition" OR "HR Recruiter") AND ("React Native" OR "React.js") AND ("Bangalore" OR "Bengaluru")'>
+                value='site:linkedin.com/in/ AND ("Technical Recruiter" OR "Talent Acquisition" OR "HR Recruiter") AND ("Java" OR "Spring Boot") AND ("Bangalore" OR "Bengaluru")'>
               <div style="display:flex; gap:6px;">
                 <button class="btn-plat-action btn-plat-copy" style="padding:4px;"
                   onclick="copyText(document.getElementById('rec-bool-1').value, 'Query copied!')">Copy Query</button>
@@ -1232,7 +1232,7 @@
               <span style="font-size:0.78rem; font-weight:700; color:var(--text-dim);">2. Startup Founders &amp; CTOs
                 (Bangalore/Remote)</span>
               <input type="text" class="platform-query-input" id="rec-bool-2" readonly
-                value='site:linkedin.com/in/ AND ("Founder" OR "Co-Founder" OR "CTO" OR "CEO") AND ("React Native" OR "React.js") AND ("Bangalore" OR "Bengaluru" OR "Remote")'>
+                value='site:linkedin.com/in/ AND ("Founder" OR "Co-Founder" OR "CTO" OR "Engineering Lead") AND ("Java" OR "Spring Boot") AND ("Bangalore" OR "Bengaluru" OR "Remote")'>
               <div style="display:flex; gap:6px;">
                 <button class="btn-plat-action btn-plat-copy" style="padding:4px;"
                   onclick="copyText(document.getElementById('rec-bool-2').value, 'Query copied!')">Copy Query</button>
@@ -1248,7 +1248,7 @@
               <span style="font-size:0.78rem; font-weight:700; color:var(--text-dim);">3. Engineering Managers &amp;
                 Tech Leads (Bangalore)</span>
               <input type="text" class="platform-query-input" id="rec-bool-3" readonly
-                value='site:linkedin.com/in/ AND ("Engineering Manager" OR "Tech Lead" OR "VP of Engineering") AND ("React Native" OR "React" OR "Node.js") AND ("Bangalore" OR "Bengaluru")'>
+                value='site:linkedin.com/in/ AND ("Engineering Manager" OR "Tech Lead" OR "VP of Engineering") AND ("Java" OR "Spring Boot" OR "Microservices") AND ("Bangalore" OR "Bengaluru")'>
               <div style="display:flex; gap:6px;">
                 <button class="btn-plat-action btn-plat-copy" style="padding:4px;"
                   onclick="copyText(document.getElementById('rec-bool-3').value, 'Query copied!')">Copy Query</button>
@@ -1264,7 +1264,7 @@
               <span style="font-size:0.78rem; font-weight:700; color:var(--text-dim);">4. HRs seeking "Immediate
                 Joiners" (Bangalore)</span>
               <input type="text" class="platform-query-input" id="rec-bool-4" readonly
-                value='site:linkedin.com/in/ AND ("Recruiter" OR "Hiring Manager") AND ("React Native" OR "React") AND "immediate" AND ("Bangalore" OR "Bengaluru")'>
+                value='site:linkedin.com/in/ AND ("Recruiter" OR "Hiring Manager") AND ("Java" OR "Spring Boot") AND "immediate" AND ("Bangalore" OR "Bengaluru")'>
               <div style="display:flex; gap:6px;">
                 <button class="btn-plat-action btn-plat-copy" style="padding:4px;"
                   onclick="copyText(document.getElementById('rec-bool-4').value, 'Query copied!')">Copy Query</button>
@@ -1280,7 +1280,7 @@
               <span style="font-size:0.78rem; font-weight:700; color:var(--text-dim);">5. Direct Google Forms/Docs Job
                 Postings</span>
               <input type="text" class="platform-query-input" id="rec-bool-5" readonly
-                value='site:docs.google.com/forms/ AND ("React Native" OR "React") AND "hiring" AND "Bangalore"'>
+                value='site:docs.google.com/forms/ AND ("Java" OR "Spring Boot") AND "hiring" AND "Bangalore"'>
               <div style="display:flex; gap:6px;">
                 <button class="btn-plat-action btn-plat-copy" style="padding:4px;"
                   onclick="copyText(document.getElementById('rec-bool-5').value, 'Query copied!')">Copy Query</button>
@@ -1302,15 +1302,15 @@
           <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom: 10px;">Click to copy these search terms to
             paste into LinkedIn's search bar to find hiring posts:</p>
           <div class="tag-container">
-            <button class="keyword-tag" onclick="copyTag('\" React Native\" AND \"hiring\" AND \"Bangalore\"')">🏷️
-              "React Native" AND "hiring" AND "Bangalore"</button>
-            <button class="keyword-tag" onclick="copyTag('\" React Native\" Bengaluru immediate')">🏷️ "React Native"
+            <button class="keyword-tag" onclick="copyTag('&quot;Java Spring Boot&quot; AND &quot;hiring&quot; AND &quot;Bangalore&quot;')">🏷️
+              "Java Spring Boot" AND "hiring" AND "Bangalore"</button>
+            <button class="keyword-tag" onclick="copyTag('&quot;Spring Boot&quot; Bengaluru immediate')">🏷️ "Spring Boot"
               Bengaluru immediate</button>
-            <button class="keyword-tag" onclick="copyTag('\" actively hiring\" \"React Native\"')">🏷️ "actively hiring"
-              "React Native"</button>
-            <button class="keyword-tag" onclick="copyTag('\" Full Stack\" AND \"React Native\" AND \"immediate\"')">🏷️
-              "Full Stack" AND "React Native" AND "immediate"</button>
-            <button class="keyword-tag" onclick="copyTag('\" React Native Developer\" \"Bangalore\"')">🏷️ "React Native
+            <button class="keyword-tag" onclick="copyTag('&quot;actively hiring&quot; &quot;Java Developer&quot;')">🏷️ "actively hiring"
+              "Java Developer"</button>
+            <button class="keyword-tag" onclick="copyTag('&quot;Java&quot; AND &quot;Spring Boot&quot; AND &quot;immediate&quot;')">🏷️
+              "Java" AND "Spring Boot" AND "immediate"</button>
+            <button class="keyword-tag" onclick="copyTag('&quot;Java Backend Developer&quot; &quot;Bangalore&quot;')">🏷️ "Java Backend
               Developer" "Bangalore"</button>
           </div>
         </div>
@@ -1396,7 +1396,7 @@
                 Google Search (Last 3 Days)
               </div>
               <input type="text" class="platform-query-input" id="q-google-immediate" readonly
-                value='site:linkedin.com/posts/ AND ("immediate joiner" OR "notice period") AND ("React Native" OR "React JS" OR "Node.js") AND "Bangalore" AND "hiring"'>
+                value='site:linkedin.com/posts/ AND ("immediate joiner" OR "notice period") AND ("Java" OR "Spring Boot" OR "Java Developer") AND "Bangalore" AND "hiring"'>
               <div class="platform-actions">
                 <button class="btn-plat-action btn-plat-copy"
                   onclick="copyText(document.getElementById('q-google-immediate').value, 'Google query copied!')">Copy</button>
@@ -1411,7 +1411,7 @@
                 LinkedIn Posts (Latest)
               </div>
               <input type="text" class="platform-query-input" id="q-li-immediate" readonly
-                value='"immediate joiner" AND ("React Native" OR "React") AND "Bangalore" AND "hiring"'>
+                value='"immediate joiner" AND ("Java" OR "Spring Boot") AND "Bangalore" AND "hiring"'>
               <div class="platform-actions">
                 <button class="btn-plat-action btn-plat-copy"
                   onclick="copyText(document.getElementById('q-li-immediate').value, 'LinkedIn query copied!')">Copy</button>
@@ -1425,7 +1425,7 @@
               <div class="platform-name" style="color:#0077b5;">
                 LinkedIn Jobs
               </div>
-              <input type="text" class="platform-query-input" id="q-lijobs-immediate" readonly value="React Native">
+              <input type="text" class="platform-query-input" id="q-lijobs-immediate" readonly value="Java Spring Boot">
               <div class="platform-actions">
                 <button class="btn-plat-action btn-plat-copy"
                   onclick="copyText(document.getElementById('q-lijobs-immediate').value, 'LinkedIn jobs query copied!')">Copy</button>
@@ -1439,7 +1439,7 @@
               <div class="platform-name" style="color:#4f46e5;">
                 Naukri Jobs
               </div>
-              <input type="text" class="platform-query-input" id="q-naukri-immediate" readonly value="React Native">
+              <input type="text" class="platform-query-input" id="q-naukri-immediate" readonly value="Java Spring Boot">
               <div class="platform-actions">
                 <button class="btn-plat-action btn-plat-copy"
                   onclick="copyText(document.getElementById('q-naukri-immediate').value, 'Naukri query copied!')">Copy</button>
@@ -1453,7 +1453,7 @@
               <div class="platform-name" style="color:#10b981;">
                 Instahyre Jobs
               </div>
-              <input type="text" class="platform-query-input" id="q-instahyre-immediate" readonly value="React Native">
+              <input type="text" class="platform-query-input" id="q-instahyre-immediate" readonly value="Java Spring Boot">
               <div class="platform-actions">
                 <button class="btn-plat-action btn-plat-copy"
                   onclick="copyText(document.getElementById('q-instahyre-immediate').value, 'Instahyre query copied!')">Copy</button>
@@ -1467,7 +1467,7 @@
               <div class="platform-name" style="color:#8b5cf6;">
                 Hirist Jobs
               </div>
-              <input type="text" class="platform-query-input" id="q-hirist-immediate" readonly value="React Native">
+              <input type="text" class="platform-query-input" id="q-hirist-immediate" readonly value="Java Spring Boot">
               <div class="platform-actions">
                 <button class="btn-plat-action btn-plat-copy"
                   onclick="copyText(document.getElementById('q-hirist-immediate').value, 'Hirist query copied!')">Copy</button>
@@ -1495,14 +1495,14 @@
         </div>
       </div>
 
-      <!-- Card 2: Walk-in Drive - React Native / React (Bangalore, Recent only) -->
+      <!-- Card 2: Walk-in Drive - Java / Spring Boot (Bangalore, Recent only) -->
       <div class="tpl-card">
         <div class="tpl-header">
           <span class="tpl-title">
             <span
               style="background: #e0e7ff; color: #3730a3; padding: 2px 8px; border-radius: 12px; font-size: 0.72rem; font-weight: 700;">Bangalore
               Walk-Ins</span>
-            2. Walk-in Drive - React Native / React
+            2. Walk-in Drive - Java / Spring Boot
           </span>
         </div>
         <div class="tpl-body">
@@ -1513,7 +1513,7 @@
                 Google Search (Last 7 Days)
               </div>
               <input type="text" class="platform-query-input" id="q-google-walkin" readonly
-                value='site:linkedin.com/posts/ AND ("walkin" OR "walk-in" OR "drive") AND ("React Native" OR "React JS" OR "React") AND "Bangalore"'>
+                value='site:linkedin.com/posts/ AND ("walkin" OR "walk-in" OR "drive") AND ("Java" OR "Spring Boot" OR "Java Developer") AND "Bangalore"'>
               <div class="platform-actions">
                 <button class="btn-plat-action btn-plat-copy"
                   onclick="copyText(document.getElementById('q-google-walkin').value, 'Google query copied!')">Copy</button>
@@ -1528,7 +1528,7 @@
                 LinkedIn Posts (Latest)
               </div>
               <input type="text" class="platform-query-input" id="q-li-walkin" readonly
-                value='"walk-in" OR "walkin" AND ("React Native" OR "React") AND "Bangalore" AND ("upcoming" OR "ongoing" OR "hiring")'>
+                value='"walk-in" OR "walkin" AND ("Java" OR "Spring Boot") AND "Bangalore" AND ("upcoming" OR "ongoing" OR "hiring")'>
               <div class="platform-actions">
                 <button class="btn-plat-action btn-plat-copy"
                   onclick="copyText(document.getElementById('q-li-walkin').value, 'LinkedIn query copied!')">Copy</button>
@@ -1542,7 +1542,7 @@
               <div class="platform-name" style="color:#0077b5;">
                 LinkedIn Jobs
               </div>
-              <input type="text" class="platform-query-input" id="q-lijobs-walkin" readonly value="React Native Walkin">
+              <input type="text" class="platform-query-input" id="q-lijobs-walkin" readonly value="Java Spring Boot Walkin">
               <div class="platform-actions">
                 <button class="btn-plat-action btn-plat-copy"
                   onclick="copyText(document.getElementById('q-lijobs-walkin').value, 'LinkedIn jobs query copied!')">Copy</button>
@@ -1556,7 +1556,7 @@
               <div class="platform-name" style="color:#4f46e5;">
                 Naukri Jobs
               </div>
-              <input type="text" class="platform-query-input" id="q-naukri-walkin" readonly value="React Native Walkin">
+              <input type="text" class="platform-query-input" id="q-naukri-walkin" readonly value="Java Spring Boot Walkin">
               <div class="platform-actions">
                 <button class="btn-plat-action btn-plat-copy"
                   onclick="copyText(document.getElementById('q-naukri-walkin').value, 'Naukri query copied!')">Copy</button>
@@ -1570,7 +1570,7 @@
               <div class="platform-name" style="color:#10b981;">
                 Instahyre Jobs
               </div>
-              <input type="text" class="platform-query-input" id="q-instahyre-walkin" readonly value="React Native">
+              <input type="text" class="platform-query-input" id="q-instahyre-walkin" readonly value="Java Spring Boot">
               <div class="platform-actions">
                 <button class="btn-plat-action btn-plat-copy"
                   onclick="copyText(document.getElementById('q-instahyre-walkin').value, 'Instahyre query copied!')">Copy</button>
@@ -1584,7 +1584,7 @@
               <div class="platform-name" style="color:#8b5cf6;">
                 Hirist Jobs
               </div>
-              <input type="text" class="platform-query-input" id="q-hirist-walkin" readonly value="React Native Walkin">
+              <input type="text" class="platform-query-input" id="q-hirist-walkin" readonly value="Java Spring Boot Walkin">
               <div class="platform-actions">
                 <button class="btn-plat-action btn-plat-copy"
                   onclick="copyText(document.getElementById('q-hirist-walkin').value, 'Hirist query copied!')">Copy</button>
@@ -1612,13 +1612,13 @@
         </div>
       </div>
 
-      <!-- Card 3: React.js, JavaScript, Node.js Hiring -->
+      <!-- Card 3: Java Spring Boot, Microservices & Full Stack -->
       <div class="tpl-card">
         <div class="tpl-header">
           <span class="tpl-title">
             <span
               style="background: #d1fae5; color: #065f46; padding: 2px 8px; border-radius: 12px; font-size: 0.72rem; font-weight: 700;">Full-Stack</span>
-            3. React.js, JavaScript, Node.js Hiring
+            3. Java Spring Boot &amp; Microservices Hiring
           </span>
         </div>
         <div class="tpl-body">
@@ -1629,7 +1629,7 @@
                 Google Search (Last 7 Days)
               </div>
               <input type="text" class="platform-query-input" id="q-google-reactnode" readonly
-                value='site:linkedin.com/posts/ ("React JS" OR "React.js" OR "Full Stack") AND ("NodeJS" OR "Node.js") AND "Bangalore" AND "hiring"'>
+                value='site:linkedin.com/posts/ ("Java Spring Boot" OR "Spring Boot" OR "Microservices") AND ("React" OR "Full Stack") AND "Bangalore" AND "hiring"'>
               <div class="platform-actions">
                 <button class="btn-plat-action btn-plat-copy"
                   onclick="copyText(document.getElementById('q-google-reactnode').value, 'Google query copied!')">Copy</button>
@@ -1644,7 +1644,7 @@
                 LinkedIn Posts (Latest)
               </div>
               <input type="text" class="platform-query-input" id="q-li-reactnode" readonly
-                value='"React.js" AND "Node.js" AND "hiring" AND "Bangalore"'>
+                value='"Java" AND "Spring Boot" AND "hiring" AND "Bangalore"'>
               <div class="platform-actions">
                 <button class="btn-plat-action btn-plat-copy"
                   onclick="copyText(document.getElementById('q-li-reactnode').value, 'LinkedIn query copied!')">Copy</button>
@@ -1658,7 +1658,7 @@
               <div class="platform-name" style="color:#0077b5;">
                 LinkedIn Jobs
               </div>
-              <input type="text" class="platform-query-input" id="q-lijobs-reactnode" readonly value="React Node">
+              <input type="text" class="platform-query-input" id="q-lijobs-reactnode" readonly value="Java Spring Boot">
               <div class="platform-actions">
                 <button class="btn-plat-action btn-plat-copy"
                   onclick="copyText(document.getElementById('q-lijobs-reactnode').value, 'LinkedIn jobs query copied!')">Copy</button>
@@ -1672,7 +1672,7 @@
               <div class="platform-name" style="color:#4f46e5;">
                 Naukri Jobs
               </div>
-              <input type="text" class="platform-query-input" id="q-naukri-reactnode" readonly value="React Node">
+              <input type="text" class="platform-query-input" id="q-naukri-reactnode" readonly value="Java Spring Boot">
               <div class="platform-actions">
                 <button class="btn-plat-action btn-plat-copy"
                   onclick="copyText(document.getElementById('q-naukri-reactnode').value, 'Naukri query copied!')">Copy</button>
@@ -1686,7 +1686,7 @@
               <div class="platform-name" style="color:#10b981;">
                 Instahyre Jobs
               </div>
-              <input type="text" class="platform-query-input" id="q-instahyre-reactnode" readonly value="React Node">
+              <input type="text" class="platform-query-input" id="q-instahyre-reactnode" readonly value="Java Spring Boot">
               <div class="platform-actions">
                 <button class="btn-plat-action btn-plat-copy"
                   onclick="copyText(document.getElementById('q-instahyre-reactnode').value, 'Instahyre query copied!')">Copy</button>
@@ -1700,7 +1700,7 @@
               <div class="platform-name" style="color:#8b5cf6;">
                 Hirist Jobs
               </div>
-              <input type="text" class="platform-query-input" id="q-hirist-reactnode" readonly value="React Node">
+              <input type="text" class="platform-query-input" id="q-hirist-reactnode" readonly value="Java Spring Boot">
               <div class="platform-actions">
                 <button class="btn-plat-action btn-plat-copy"
                   onclick="copyText(document.getElementById('q-hirist-reactnode').value, 'Hirist query copied!')">Copy</button>
@@ -1713,8 +1713,7 @@
           <!-- Outreach Message Pitch -->
           <div style="margin-top: 14px;">
             <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 6px;">
-              <span style="font-size:0.8rem; font-weight:700; color:var(--text-dim);">Custom Pitch: React JS / Node JS
-                Roles</span>
+              <span style="font-size:0.8rem; font-weight:700; color:var(--text-dim);">Custom Pitch: Java Spring Boot &amp; Full Stack Roles</span>
               <button class="btn-copy" onclick="copyVal('query-reactnode-pitch')">
                 <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                   <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
@@ -1746,7 +1745,7 @@
                 Google Search (Last 7 Days)
               </div>
               <input type="text" class="platform-query-input" id="q-google-3-4-year" readonly
-                value='site:linkedin.com/posts/ ("React Native" OR "React JS") AND ("3+ years" OR "3-4 years") AND "Bangalore" AND "hiring"'>
+                value='site:linkedin.com/posts/ ("Java" OR "Spring Boot" OR "Java Developer") AND ("3+ years" OR "3-4 years") AND "Bangalore" AND "hiring"'>
               <div class="platform-actions">
                 <button class="btn-plat-action btn-plat-copy"
                   onclick="copyText(document.getElementById('q-google-3-4-year').value, 'Google query copied!')">Copy</button>
@@ -1761,7 +1760,7 @@
                 LinkedIn Posts (Latest)
               </div>
               <input type="text" class="platform-query-input" id="q-li-3-4-year" readonly
-                value='("React Native" OR "React") AND ("3+ years" OR "3-4 years") AND "Bangalore" AND "hiring"'>
+                value='("Java" OR "Spring Boot") AND ("3+ years" OR "3-4 years") AND "Bangalore" AND "hiring"'>
               <div class="platform-actions">
                 <button class="btn-plat-action btn-plat-copy"
                   onclick="copyText(document.getElementById('q-li-3-4-year').value, 'LinkedIn query copied!')">Copy</button>
@@ -1775,7 +1774,7 @@
               <div class="platform-name" style="color:#0077b5;">
                 LinkedIn Jobs
               </div>
-              <input type="text" class="platform-query-input" id="q-lijobs-3-4-year" readonly value="React Native">
+              <input type="text" class="platform-query-input" id="q-lijobs-3-4-year" readonly value="Java Spring Boot">
               <div class="platform-actions">
                 <button class="btn-plat-action btn-plat-copy"
                   onclick="copyText(document.getElementById('q-lijobs-3-4-year').value, 'LinkedIn jobs query copied!')">Copy</button>
@@ -1789,7 +1788,7 @@
               <div class="platform-name" style="color:#4f46e5;">
                 Naukri Jobs
               </div>
-              <input type="text" class="platform-query-input" id="q-naukri-3-4-year" readonly value="React Native">
+              <input type="text" class="platform-query-input" id="q-naukri-3-4-year" readonly value="Java Spring Boot">
               <div class="platform-actions">
                 <button class="btn-plat-action btn-plat-copy"
                   onclick="copyText(document.getElementById('q-naukri-3-4-year').value, 'Naukri query copied!')">Copy</button>
@@ -1803,7 +1802,7 @@
               <div class="platform-name" style="color:#10b981;">
                 Instahyre Jobs
               </div>
-              <input type="text" class="platform-query-input" id="q-instahyre-3-4-year" readonly value="React Native">
+              <input type="text" class="platform-query-input" id="q-instahyre-3-4-year" readonly value="Java Spring Boot">
               <div class="platform-actions">
                 <button class="btn-plat-action btn-plat-copy"
                   onclick="copyText(document.getElementById('q-instahyre-3-4-year').value, 'Instahyre query copied!')">Copy</button>
@@ -1817,7 +1816,7 @@
               <div class="platform-name" style="color:#8b5cf6;">
                 Hirist Jobs
               </div>
-              <input type="text" class="platform-query-input" id="q-hirist-3-4-year" readonly value="React Native">
+              <input type="text" class="platform-query-input" id="q-hirist-3-4-year" readonly value="Java Spring Boot">
               <div class="platform-actions">
                 <button class="btn-plat-action btn-plat-copy"
                   onclick="copyText(document.getElementById('q-hirist-3-4-year').value, 'Hirist query copied!')">Copy</button>
@@ -1863,7 +1862,7 @@
                 Google Search (Last 7 Days)
               </div>
               <input type="text" class="platform-query-input" id="q-google-4-5-year" readonly
-                value='site:linkedin.com/posts/ ("React Native" OR "React JS") AND ("4+ years" OR "4-5 years") AND "Bangalore" AND "hiring"'>
+                value='site:linkedin.com/posts/ ("Java" OR "Spring Boot" OR "Backend Developer") AND ("4+ years" OR "4-5 years") AND "Bangalore" AND "hiring"'>
               <div class="platform-actions">
                 <button class="btn-plat-action btn-plat-copy"
                   onclick="copyText(document.getElementById('q-google-4-5-year').value, 'Google query copied!')">Copy</button>
@@ -1878,7 +1877,7 @@
                 LinkedIn Posts (Latest)
               </div>
               <input type="text" class="platform-query-input" id="q-li-4-5-year" readonly
-                value='("React Native" OR "React") AND ("4+ years" OR "4-5 years") AND "Bangalore" AND "hiring"'>
+                value='("Java" OR "Spring Boot") AND ("4+ years" OR "4-5 years") AND "Bangalore" AND "hiring"'>
               <div class="platform-actions">
                 <button class="btn-plat-action btn-plat-copy"
                   onclick="copyText(document.getElementById('q-li-4-5-year').value, 'LinkedIn query copied!')">Copy</button>
@@ -1892,7 +1891,7 @@
               <div class="platform-name" style="color:#0077b5;">
                 LinkedIn Jobs
               </div>
-              <input type="text" class="platform-query-input" id="q-lijobs-4-5-year" readonly value="React Native">
+              <input type="text" class="platform-query-input" id="q-lijobs-4-5-year" readonly value="Java Spring Boot">
               <div class="platform-actions">
                 <button class="btn-plat-action btn-plat-copy"
                   onclick="copyText(document.getElementById('q-lijobs-4-5-year').value, 'LinkedIn jobs query copied!')">Copy</button>
@@ -1906,7 +1905,7 @@
               <div class="platform-name" style="color:#4f46e5;">
                 Naukri Jobs
               </div>
-              <input type="text" class="platform-query-input" id="q-naukri-4-5-year" readonly value="React Native">
+              <input type="text" class="platform-query-input" id="q-naukri-4-5-year" readonly value="Java Spring Boot">
               <div class="platform-actions">
                 <button class="btn-plat-action btn-plat-copy"
                   onclick="copyText(document.getElementById('q-naukri-4-5-year').value, 'Naukri query copied!')">Copy</button>
@@ -1920,7 +1919,7 @@
               <div class="platform-name" style="color:#10b981;">
                 Instahyre Jobs
               </div>
-              <input type="text" class="platform-query-input" id="q-instahyre-4-5-year" readonly value="React Native">
+              <input type="text" class="platform-query-input" id="q-instahyre-4-5-year" readonly value="Java Spring Boot">
               <div class="platform-actions">
                 <button class="btn-plat-action btn-plat-copy"
                   onclick="copyText(document.getElementById('q-instahyre-4-5-year').value, 'Instahyre query copied!')">Copy</button>
@@ -1934,7 +1933,7 @@
               <div class="platform-name" style="color:#8b5cf6;">
                 Hirist Jobs
               </div>
-              <input type="text" class="platform-query-input" id="q-hirist-4-5-year" readonly value="React Native">
+              <input type="text" class="platform-query-input" id="q-hirist-4-5-year" readonly value="Java Spring Boot">
               <div class="platform-actions">
                 <button class="btn-plat-action btn-plat-copy"
                   onclick="copyText(document.getElementById('q-hirist-4-5-year').value, 'Hirist query copied!')">Copy</button>

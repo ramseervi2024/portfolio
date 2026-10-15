@@ -2466,7 +2466,7 @@
           <div class="matrix-row">
             <div class="form-group">
               <label for="bool-roles">Job Titles (OR)</label>
-              <input type="text" id="bool-roles" class="form-input" value='"React Native" OR "React JS" OR "Frontend Developer" OR "Full Stack Developer"' oninput="updateBooleanQuery()">
+              <input type="text" id="bool-roles" class="form-input" value='"Java Spring Boot" OR "Spring Boot" OR "Java Developer" OR "Java Backend Developer"' oninput="updateBooleanQuery()">
             </div>
             <div class="form-group">
               <label for="bool-keywords">Additional Keywords (AND)</label>
@@ -2518,7 +2518,7 @@
                 <svg fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.8v8h2.8v-4.87c0-.26.05-.5.14-.69a1.62 1.62 0 0 1 1.48-1.08c.75 0 1.3.58 1.3 1.42v5.22h2.8M6.5 8.37a1.37 1.37 0 0 0 1.38-1.37c0-.76-.62-1.38-1.38-1.38A1.37 1.37 0 0 0 5.1 7c0 .75.62 1.37 1.4 1.37m1.4 10.13V10.5h-2.8v8h2.8z"/></svg>
                 LinkedIn Posts (Recruiter Feed)
               </div>
-              <div class="launcher-query">"React Native" AND "Bangalore" AND "hiring"</div>
+              <div class="launcher-query">"Java Spring Boot" AND "Bangalore" AND "hiring"</div>
               <div class="launcher-actions">
                 <button class="btn btn-secondary" style="flex:1; padding: 6px;" onclick="launchPortalSearch('li-posts')">Open Live Feed</button>
               </div>
@@ -2529,7 +2529,7 @@
                 <svg fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.8v8h2.8v-4.87c0-.26.05-.5.14-.69a1.62 1.62 0 0 1 1.48-1.08c.75 0 1.3.58 1.3 1.42v5.22h2.8M6.5 8.37a1.37 1.37 0 0 0 1.38-1.37c0-.76-.62-1.38-1.38-1.38A1.37 1.37 0 0 0 5.1 7c0 .75.62 1.37 1.4 1.37m1.4 10.13V10.5h-2.8v8h2.8z"/></svg>
                 LinkedIn Jobs (Bangalore)
               </div>
-              <div class="launcher-query">React Native Developer in Bangalore</div>
+              <div class="launcher-query">Java Spring Boot Developer in Bangalore</div>
               <div class="launcher-actions">
                 <button class="btn btn-secondary" style="flex:1; padding: 6px;" onclick="launchPortalSearch('li-jobs')">Open Jobs</button>
               </div>
@@ -2540,7 +2540,7 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
                 Instahyre Jobs
               </div>
-              <div class="launcher-query">Skills: React Native / React.js</div>
+              <div class="launcher-query">Skills: Java / Spring Boot / Full Stack</div>
               <div class="launcher-actions">
                 <button class="btn btn-secondary" style="flex:1; padding: 6px;" onclick="launchPortalSearch('instahyre')">Open Portal</button>
               </div>
@@ -2562,7 +2562,7 @@
                 <svg fill="currentColor" viewBox="0 0 24 24"><path d="M2 3h20v18H2V3zm2 2v14h16V5H4zm8 3.5c-3.03 0-5.5 2.47-5.5 5.5s2.47 5.5 5.5 5.5 5.5-2.47 5.5-5.5S15.03 8.5 12 8.5zm0 1.5c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4z"/></svg>
                 Indeed Jobs
               </div>
-              <div class="launcher-query">React Native Developer in Bangalore</div>
+              <div class="launcher-query">Java Spring Boot Developer in Bangalore</div>
               <div class="launcher-actions">
                 <button class="btn btn-secondary" style="flex:1; padding: 6px;" onclick="launchPortalSearch('indeed')">Launch</button>
               </div>
@@ -5299,15 +5299,15 @@ Java 17/21, Spring Boot 3.x, Spring MVC, Spring Data JPA, Hibernate ORM, Spring 
     function launchPortalSearch(platform) {
       let url = "";
       if (platform === 'li-posts') {
-        url = `https://www.linkedin.com/search/results/content/?keywords=${encodeURIComponent('"React Native" AND "Bangalore" AND "hiring"')}&sortBy=date`;
+        url = `https://www.linkedin.com/search/results/content/?keywords=${encodeURIComponent('"Java Spring Boot" AND "Bangalore" AND "hiring"')}&sortBy=date`;
       } else if (platform === 'li-jobs') {
-        url = `https://www.linkedin.com/jobs/search/?keywords=${encodeURIComponent('React Native Developer')}&location=Bangalore`;
+        url = `https://www.linkedin.com/jobs/search/?keywords=${encodeURIComponent('Java Spring Boot Developer')}&location=Bangalore`;
       } else if (platform === 'instahyre') {
-        url = `https://www.instahyre.com/search-jobs?skills=${encodeURIComponent('React Native')}&location=Bangalore`;
+        url = `https://www.instahyre.com/search-jobs?skills=${encodeURIComponent('Java, Spring Boot')}&location=Bangalore`;
       } else if (platform === 'wellfound') {
-        url = `https://wellfound.com/jobs?role=mobile-engineer&location=bangalore`;
+        url = `https://wellfound.com/jobs?role=backend-engineer&location=bangalore`;
       } else if (platform === 'indeed') {
-        url = 'https://in.indeed.com/jobs?q=react+native+developer&l=Bangalore%2C+Karnataka&fromage=last&salaryType=%E2%82%B99%2C30%2C000&radius=100&sc=0kf%3Aattr%286M28R%7C84K74%7CJB2WC%7CY7U37%252COR%29attr%28CF3CP%29%3B&from=searchOnDesktopSerp&vjk=c7c426fae1549a2f';
+        url = 'https://in.indeed.com/jobs?q=java+spring+boot+developer&l=Bangalore%2C+Karnataka&fromage=last';
       }
       window.open(url, '_blank');
     }
