@@ -114,4 +114,10 @@ Seeking a dedicated **Java Spring Boot Backend Developer** role. Focused on desi
 
 ---
 
-*Portfolio Page: [index.html](./index.html)*
+## Portfolio & Job Hunt Tools Suite
+
+- **Portfolio**: [index.html](./index.html) - Main portfolio website (Editorial neutral Gust aesthetic, Behance Pro metric cards, and responsive project showcases).
+- **Career Tools**: [career-tools.html](./career-tools.html) - Outreach OS, Form Autofill Decks, Job Radar, and Recruiter Follow-up Sequencer.
+- **Outreach Hub**: [outreach-hub.html](./outreach-hub.html) - Cold copy templates (LinkedIn, WhatsApp, Email, Cover Letter) & Interactive Q&A Copier.
+- **Email Sender**: [email-sender.html](./email-sender.html) - 1-Click Gmail composer and WhatsApp outreach sender with rich link formatting.
+- **Job Finder**: [job-finder.html](./job-finder.html) - Boolean search matrix and social media hiring radar.

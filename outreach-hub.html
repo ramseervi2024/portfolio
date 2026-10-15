@@ -812,7 +812,7 @@
           </svg>
           Outreach Copy Hub
         </div>
-        <div class="logo-subtitle">Ramesh Seervi · 3.7 Years Exp · Bangalore</div>
+        <div class="logo-subtitle">Ramesh Seervi · 4+ Years Exp · Java Spring Boot Backend &amp; Full Stack · Bangalore</div>
       </div>
 
       <div class="tabs-nav">
@@ -1325,18 +1325,22 @@
           <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom: 10px;">Copy these key skills/tags to add
             to your Naukri profile or search bar to match active hiring software:</p>
           <div class="tag-container">
+            <button class="keyword-tag" onclick="copyTag('Java')">🏷️ Java</button>
+            <button class="keyword-tag" onclick="copyTag('Spring Boot')">🏷️ Spring Boot</button>
+            <button class="keyword-tag" onclick="copyTag('Spring Security')">🏷️ Spring Security</button>
+            <button class="keyword-tag" onclick="copyTag('Spring Data JPA')">🏷️ Spring Data JPA</button>
+            <button class="keyword-tag" onclick="copyTag('Hibernate')">🏷️ Hibernate</button>
+            <button class="keyword-tag" onclick="copyTag('RESTful APIs')">🏷️ RESTful APIs</button>
+            <button class="keyword-tag" onclick="copyTag('MySQL')">🏷️ MySQL</button>
+            <button class="keyword-tag" onclick="copyTag('Apache Kafka')">🏷️ Apache Kafka</button>
+            <button class="keyword-tag" onclick="copyTag('Docker')">🏷️ Docker</button>
+            <button class="keyword-tag" onclick="copyTag('AWS')">🏷️ AWS</button>
             <button class="keyword-tag" onclick="copyTag('React Native')">🏷️ React Native</button>
             <button class="keyword-tag" onclick="copyTag('React.js')">🏷️ React.js</button>
-            <button class="keyword-tag" onclick="copyTag('Node.js')">🏷️ Node.js</button>
-            <button class="keyword-tag" onclick="copyTag('Redux')">🏷️ Redux</button>
-            <button class="keyword-tag" onclick="copyTag('JavaScript')">🏷️ JavaScript</button>
             <button class="keyword-tag" onclick="copyTag('TypeScript')">🏷️ TypeScript</button>
-            <button class="keyword-tag" onclick="copyTag('Express.js')">🏷️ Express.js</button>
-            <button class="keyword-tag" onclick="copyTag('MongoDB')">🏷️ MongoDB</button>
             <button class="keyword-tag" onclick="copyTag('Immediate Joiner')">🏷️ Immediate Joiner</button>
-            <button class="keyword-tag" onclick="copyTag('MERN Stack')">🏷️ MERN Stack</button>
-            <button class="keyword-tag" onclick="copyTag('Full Stack JavaScript Developer')">🏷️ Full Stack JavaScript
-              Developer</button>
+            <button class="keyword-tag" onclick="copyTag('Java Backend Developer')">🏷️ Java Backend Developer</button>
+            <button class="keyword-tag" onclick="copyTag('Full Stack Software Developer')">🏷️ Full Stack Software Developer</button>
           </div>
         </div>
       </div>
@@ -1991,9 +1995,9 @@
         <button class="filter-pill active" onclick="filterCategory('all', this)">All Questions</button>
         <button class="filter-pill" onclick="filterCategory('hr', this)">HR & Profile</button>
         <button class="filter-pill" onclick="filterCategory('portal', this)">Form Auto-Fill</button>
+        <button class="filter-pill" onclick="filterCategory('java', this)">Java & Spring Boot</button>
         <button class="filter-pill" onclick="filterCategory('rn', this)">React Native</button>
         <button class="filter-pill" onclick="filterCategory('react', this)">React JS</button>
-        <button class="filter-pill" onclick="filterCategory('node', this)">Node.js & Express</button>
         <button class="filter-pill" onclick="filterCategory('js', this)">JS & TS</button>
       </div>
 
@@ -2016,16 +2020,17 @@
     const TEMPLATES = {
       'li-req': {
         limit: 300,
-        content: `Hi, I'm a Full-Stack JS Developer with 3.7+ yrs experience (React Native, React, Node.js). Available for immediate joining in Bengaluru. Let's connect! Resume: https://drive.google.com/file/d/1SMA6ouALJ9uzKEm-zFy-EbtYbQ5_N4l2/view?usp=sharing`
+        content: `Hi, I'm a Java Spring Boot Backend & Full Stack Developer with 4+ yrs experience (Java 17, Spring Boot, MySQL, Kafka, Docker, React.js, React Native). Available for immediate joining in Bengaluru. Let's connect! Resume: https://drive.google.com/file/d/1SMA6ouALJ9uzKEm-zFy-EbtYbQ5_N4l2/view?usp=sharing`
       },
       'li-dm': {
         content: `Hi,
 
-I am a Full-Stack JavaScript Developer with 3.7+ years of experience specializing in React Native, React, and Node.js. I am based in Bengaluru and available to join immediately.
+I am a Java Spring Boot Backend Developer & Full Stack Engineer with 4+ years of experience specializing in Java 17/21, Spring Boot 3.x, Spring Data JPA, Hibernate, MySQL, Kafka, Docker, AWS, and modern frontends (React.js & React Native). I am based in Bengaluru and available to join immediately (0 days notice).
 
 Key Highlights:
-• Deployed 4+ production React Native apps to Google Play & App Store
-• Developed responsive React web apps and scalable Node.js/Express APIs
+• Engineered production RESTful microservices with Spring Boot, Spring Security (JWT, RBAC), and MySQL
+• Implemented high-throughput event processing using Apache Kafka & containerized with Docker & AWS
+• Built & deployed 4+ production mobile apps with React Native to Google Play & App Store
 • CGPA: 8.2/10 | B.E. in Computer Science
 
 Links:
@@ -2040,10 +2045,10 @@ Ramesh Seervi
 +91 6360494477`
       },
       'li-comment': {
-        content: `Hi, I'm a Full-Stack Developer (3.7+ yrs exp) specializing in React Native + Node.js. Immediate joiner in Bangalore. Ready for technical rounds. Resume: https://drive.google.com/file/d/1SMA6ouALJ9uzKEm-zFy-EbtYbQ5_N4l2/view?usp=sharing. Let's connect!`
+        content: `Hi, I'm a Java Spring Boot Backend & Full Stack Developer (4+ yrs exp) specializing in Spring Boot, MySQL, Kafka, Docker, React.js & React Native. Immediate joiner in Bangalore. Ready for technical rounds. Resume: https://drive.google.com/file/d/1SMA6ouALJ9uzKEm-zFy-EbtYbQ5_N4l2/view?usp=sharing. Let's connect!`
       },
       'wa-pitch': {
-        content: `Hi, this is Ramesh Seervi. I'm a Full-Stack JS Developer (3.7+ yrs exp) specializing in React Native, React, and Node.js. I am an immediate joiner in Bangalore. Sharing my details for any open developer roles:
+        content: `Hi, this is Ramesh Seervi. I'm a Java Spring Boot Backend & Full Stack Developer (4+ yrs exp) specializing in Java 17/21, Spring Boot 3.x, Spring Data JPA, MySQL, Kafka, Docker, React.js, and React Native. I am an immediate joiner (0 days notice) based in Bangalore. Sharing my details for any open developer roles:
 • Resume: https://drive.google.com/file/d/1SMA6ouALJ9uzKEm-zFy-EbtYbQ5_N4l2/view?usp=sharing
 • Video Pitch: https://drive.google.com/file/d/1nlZ-unJ_i5oCUuqM9IO1x9ANcuHM-_XR/view?usp=drive_link
 • GitHub: https://github.com/ramseervi2024
@@ -2051,22 +2056,23 @@ Ramesh Seervi
 Let me know if we can connect for a short call. Thanks!`
       },
       'naukri-pitch': {
-        content: `Hello, I am interested in developer opportunities. I am a Full-Stack JS Developer with 3.7+ years experience in React Native + Node.js, and am an immediate joiner based in Bangalore. CTC: 8.5 LPA, ECTC: 12-16 LPA (Negotiable). Resume: https://drive.google.com/file/d/1SMA6ouALJ9uzKEm-zFy-EbtYbQ5_N4l2/view?usp=sharing. Ready for technical rounds.`
+        content: `Hello, I am interested in developer opportunities. I am a Java Spring Boot Backend & Full Stack Developer with 4+ years experience in Java 17, Spring Boot, JPA, MySQL, Kafka, Docker, React.js & React Native, and am an immediate joiner based in Bangalore. CTC: 8.5 LPA, ECTC: 12-16 LPA (Negotiable). Resume: https://drive.google.com/file/d/1SMA6ouALJ9uzKEm-zFy-EbtYbQ5_N4l2/view?usp=sharing. Ready for technical rounds.`
       },
       'sms-pitch': {
-        content: `Hi, Ramesh Seervi here. Full Stack Developer (3.7+ yrs exp) React Native + Node.js. Immediate joiner in Bangalore. Resume: https://drive.google.com/file/d/1SMA6ouALJ9uzKEm-zFy-EbtYbQ5_N4l2/view?usp=sharing | Video: https://drive.google.com/file/d/1nlZ-unJ_i5oCUuqM9IO1x9ANcuHM-_XR/view?usp=drive_link | GitHub: https://github.com/ramseervi2024`
+        content: `Hi, Ramesh Seervi here. Java Spring Boot Backend & Full Stack Developer (4+ yrs exp). Java, Spring Boot, MySQL, Docker, React Native. Immediate joiner in Bangalore. Resume: https://drive.google.com/file/d/1SMA6ouALJ9uzKEm-zFy-EbtYbQ5_N4l2/view?usp=sharing | Video: https://drive.google.com/file/d/1nlZ-unJ_i5oCUuqM9IO1x9ANcuHM-_XR/view?usp=drive_link | GitHub: https://github.com/ramseervi2024`
       },
       'cover-letter': {
         content: `Dear Hiring Team,
 
-I am writing to express my interest in joining your team as a Software Developer. With 3.7+ years of professional experience developing end-to-end web and mobile applications using React, React Native, and Node.js, I am confident in my ability to make an immediate impact.
+I am writing to express my interest in joining your team as a Java Spring Boot Backend / Full Stack Software Developer. With 4+ years of professional experience developing enterprise backend systems and cross-platform applications using Java 17/21, Spring Boot 3.x, Spring Data JPA, Hibernate, MySQL, Kafka, Docker, React.js, and React Native, I am confident in my ability to make an immediate impact.
 
 In my previous roles, I have:
-• Built and deployed 4+ React Native mobile apps to the App Store and Google Play Store
-• Constructed robust REST APIs using Node.js, Express.js, and MongoDB
-• Developed responsive frontend interfaces in React.js
+• Architected and developed robust RESTful APIs and microservices using Spring Boot, Spring Security (JWT, RBAC), and MySQL
+• Optimized relational database queries, transactions, and indexing using Spring Data JPA and Hibernate ORM
+• Integrated asynchronous message streaming with Apache Kafka and deployed containerized services using Docker & AWS
+• Built and deployed 4+ cross-platform mobile apps to Google Play Store and Apple App Store using React Native
 
-I am currently based in Bengaluru and available to join immediately. You can review my details here:
+I am currently based in Bengaluru and available to join immediately (0 days notice). You can review my details here:
 • Resume: https://drive.google.com/file/d/1SMA6ouALJ9uzKEm-zFy-EbtYbQ5_N4l2/view?usp=sharing
 • Video Intro: https://drive.google.com/file/d/1nlZ-unJ_i5oCUuqM9IO1x9ANcuHM-_XR/view?usp=drive_link
 • GitHub: https://github.com/ramseervi2024
@@ -2080,9 +2086,9 @@ Ramesh Seervi
       'query-immediate-pitch': {
         content: `Hi,
 
-I saw your requirement for developers. I am a Full-Stack JavaScript Developer with 3.7+ years of experience specializing in React Native, React.js, and Node.js. 
+I saw your requirement for developers. I am a Java Spring Boot Backend & Full Stack Developer with 4+ years of experience specializing in Java 17, Spring Boot, Spring Data JPA, MySQL, Kafka, Docker, React.js, and React Native. 
 
-I am based in Bangalore and available to join immediately (0-15 days notice). 
+I am based in Bangalore and available to join immediately (0 days notice). 
 
 My references:
 • Resume: https://drive.google.com/file/d/1SMA6ouALJ9uzKEm-zFy-EbtYbQ5_N4l2/view?usp=sharing
@@ -2098,9 +2104,9 @@ Ramesh Seervi
       'query-walkin-pitch': {
         content: `Hi,
 
-I noticed your post regarding the upcoming React Native / React walk-in drive in Bangalore.
+I noticed your post regarding the upcoming developer walk-in drive in Bangalore.
 
-With 3.7+ years of experience building mobile applications (deployed 4+ apps on stores) and web frontends, I would love to attend. Could you please confirm the drive details, venue location, timings, and registration requirements?
+With 4+ years of experience building enterprise backend services with Java Spring Boot, MySQL, Kafka, Docker, as well as React.js & React Native mobile applications (deployed 4+ apps), I would love to attend. Could you please confirm the drive details, venue location, timings, and registration requirements?
 
 Here is my profile:
 • Resume: https://drive.google.com/file/d/1SMA6ouALJ9uzKEm-zFy-EbtYbQ5_N4l2/view?usp=sharing
@@ -2115,14 +2121,14 @@ Ramesh Seervi
       'query-reactnode-pitch': {
         content: `Hi,
 
-I am writing to express my interest in your React JS & Node.js Developer role. 
+I am writing to express my interest in your Java Spring Boot & Full Stack Developer role. 
 
-I'm a Full-Stack JavaScript Developer with 3.7+ years of experience. I specialize in frontends using React.js and backend architectures using Node.js, Express, and MongoDB. I'm based in Bangalore and available to join immediately.
+I'm a Full Stack Software Developer with 4+ years of experience. I specialize in backend architectures using Java 17/21, Spring Boot 3.x, Spring Data JPA, MySQL, Kafka, Docker, and frontend web & mobile using React.js & React Native. I'm based in Bangalore and available to join immediately (0 days notice).
 
 Summary of qualifications:
-• Deployed production React Native mobile apps and robust web frontends.
-• Architected scalable REST APIs with Node.js/Express.
-• Highly proficient with JavaScript/TypeScript and Redux.
+• Architected scalable, secure REST APIs with Spring Boot, Spring Security (JWT), and MySQL.
+• High-throughput messaging with Apache Kafka, containerized with Docker & deployed on AWS.
+• Deployed 4+ production React Native mobile apps and robust React.js web interfaces.
 
 My details:
 • Resume: https://drive.google.com/file/d/1SMA6ouALJ9uzKEm-zFy-EbtYbQ5_N4l2/view?usp=sharing
@@ -2138,12 +2144,12 @@ Ramesh Seervi
       'query-3-4-year-pitch': {
         content: `Hi,
 
-I saw your posting for a Developer role requiring 3-4 years of experience. With 3.7+ years of hands-on experience building mobile apps with React Native (deployed 4+ apps) and web apps with React.js + Node.js, I believe I am an ideal fit.
+I saw your posting for a Developer role requiring 3-4 years of experience. With 4+ years of hands-on experience building enterprise backend systems with Java Spring Boot, MySQL, Kafka, Docker, and frontend/mobile apps with React.js & React Native, I believe I am an ideal fit.
 
 Key strengths:
-• Mobile: React Native, Redux, Store Deployments
-• Frontend & Backend: React.js, Node.js, Express, MongoDB
-• Availability: Immediate joiner based in Bangalore
+• Backend: Java 17/21, Spring Boot 3.x, Spring Data JPA, Hibernate, MySQL, Kafka, Docker, AWS
+• Frontend & Mobile: React.js, React Native, Redux, Store Deployments
+• Availability: Immediate joiner based in Bangalore (0 days notice)
 
 My references:
 • Resume: https://drive.google.com/file/d/1SMA6ouALJ9uzKEm-zFy-EbtYbQ5_N4l2/view?usp=sharing
@@ -2159,12 +2165,12 @@ Ramesh Seervi
       'query-4-5-year-pitch': {
         content: `Hi,
 
-I'm reaching out regarding your requirement for a developer with 4-5 years of experience. While I have 3.7+ years of professional experience, I have independently built and deployed 4+ production mobile apps to the App Store and Google Play, and scaled Node.js REST APIs. I bring strong self-direction and full-stack ownership that matches your requirements.
+I'm reaching out regarding your requirement for a developer with 4-5 years of experience. With 4+ years of professional experience, I have architected and scaled Java Spring Boot backend microservices with MySQL, Kafka, and Docker, and independently built and deployed 4+ production mobile apps to the App Store and Google Play. I bring strong engineering ownership that matches your requirements.
 
 Key Highlights:
-• End-to-End Delivery: React Native (App Store & Play Store)
-• Full-Stack JS: React.js web apps + Node.js/Express APIs
-• Immediate joiner based in Bangalore (0-15 days notice)
+• Enterprise Backend: Java 17/21, Spring Boot 3.x, Spring Data JPA, Hibernate, MySQL, Kafka, Docker, AWS
+• End-to-End Delivery: React Native (App Store & Play Store) + React.js web apps
+• Immediate joiner based in Bangalore (0 days notice)
 
 My links:
 • Resume: https://drive.google.com/file/d/1SMA6ouALJ9uzKEm-zFy-EbtYbQ5_N4l2/view?usp=sharing
@@ -2357,7 +2363,7 @@ Ramesh Seervi
         category: 'hr',
         categoryName: 'HR & Profile',
         question: 'Tell me about yourself / Summarize your professional experience.',
-        answer: "I'm a Full-Stack Developer with 3.7+ years of experience specializing in React Native, React.js, and Node.js. I have built and deployed 4+ production mobile apps to the App Store and Google Play Store, and engineered scalable REST APIs. I'm highly self-driven, based in Bangalore, and ready to join immediately."
+        answer: "I'm a Java Spring Boot Backend & Full Stack Software Developer with 4+ years of experience specializing in Java 17/21, Spring Boot 3.x, Spring Data JPA, Hibernate, MySQL, Apache Kafka, Docker, Kubernetes, AWS, and modern frontends (React.js, React Native). I have engineered enterprise RESTful APIs, built microservices with JWT authentication, and deployed 4+ production mobile apps to the App Store and Google Play Store. I'm highly self-driven, based in Bangalore, and ready to join immediately (0 days notice)."
       },
       {
         category: 'hr',
@@ -2381,13 +2387,13 @@ Ramesh Seervi
         category: 'hr',
         categoryName: 'HR & Profile',
         question: 'What is your detailed work experience (Company Names)?',
-        answer: "• Total Experience: 3.7+ years in Web & Mobile App Development\n\n1. Company Name: Imcrinox Technologies, Bengaluru\n   • Role: React & React Native Developer\n   • Duration: Nov 2022 - Present (Full-time)\n   • Impact: Developed/deployed 4+ apps on App/Play Store, integrated Axios, Firebase, Google Maps, Apple/Google Pay, and Node.js APIs.\n\n2. Company Name: Gridrnd, Bengaluru\n   • Role: Web Developer Intern\n   • Duration: Feb 2022 - Oct 2022\n   • Impact: React/Redux UI building, Node/Express/MongoDB backend services, Postman testing."
+        answer: "• Total Experience: 4+ years in Enterprise Backend & Full Stack Software Development\n\n1. Company Name: Imcrinox Technologies, Bengaluru\n   • Role: Java Spring Boot & Full Stack Developer\n   • Duration: Nov 2022 - Present (Full-time)\n   • Impact: Architected enterprise Spring Boot REST APIs, Spring Security (JWT/RBAC), MySQL schemas, Kafka event streaming, Docker containers, and built/deployed 4+ mobile apps on App Store & Play Store.\n\n2. Company Name: Gridrnd, Bengaluru\n   • Role: Software Developer Intern\n   • Duration: Feb 2022 - Oct 2022\n   • Impact: Backend API services, database design, React UI integration, and Postman API testing."
       },
       {
         category: 'hr',
         categoryName: 'HR & Profile',
         question: 'Why are you interested in our company?',
-        answer: "I am highly interested because your company builds scalable products that align with my hands-on experience in React Native optimization (Hermes, FlatList memory tuning) and full-stack JavaScript. I want to contribute to an active, product-focused team and help deliver robust web and mobile app releases from day one."
+        answer: "I am highly interested because your company builds scalable products that align with my hands-on experience in Java Spring Boot enterprise architecture, high-throughput microservices, MySQL database tuning, and full-stack React / React Native integration. I want to contribute to an active, product-focused team and help deliver robust releases from day one."
       },
       {
         category: 'hr',
@@ -2399,13 +2405,13 @@ Ramesh Seervi
         category: 'hr',
         categoryName: 'HR & Profile',
         question: 'What is your notice period and availability?',
-        answer: "I am not serving an active notice period and am available to join immediately. I can complete onboarding and start working within 24 to 48 hours of receiving an offer."
+        answer: "I am not serving an active notice period and am available to join immediately (0 days notice). I can complete onboarding and start working within 24 to 48 hours of receiving an offer."
       },
       {
         category: 'hr',
         categoryName: 'HR & Profile',
         question: 'Why are you looking for a job change?',
-        answer: "I'm looking to take on larger technical ownership and face new challenges. Having built multiple end-to-end applications, I want to apply my expertise in React Native performance optimizations and full-stack architecture in a fast-paced product environment."
+        answer: "I'm looking to take on larger technical ownership and face new challenges. Having engineered multiple end-to-end backend microservices and mobile applications, I want to apply my expertise in Java Spring Boot, MySQL optimization, and full-stack architecture in a fast-paced product environment."
       },
       {
         category: 'hr',
@@ -2417,7 +2423,7 @@ Ramesh Seervi
         category: 'hr',
         categoryName: 'HR & Profile',
         question: 'Can you clarify your recent employment timeline / TCS schedule delay?',
-        answer: "I was recently with TCS where onboarding and project allocation schedules faced delays. I proactively decided to seek direct, high-impact product-based opportunities where I can immediately write production-ready code and contribute to mobile and web releases from day one."
+        answer: "I was recently with TCS where onboarding and project allocation schedules faced delays. I proactively decided to seek direct, high-impact product-based opportunities where I can immediately write production-ready code and contribute to backend and full-stack releases from day one."
       },
       {
         category: 'portal',
@@ -2476,20 +2482,20 @@ Ramesh Seervi
       {
         category: 'portal',
         categoryName: 'Form Auto-Fill',
+        question: 'Years of Java & Spring Boot Experience (for portals)',
+        answer: "4.0+"
+      },
+      {
+        category: 'portal',
+        categoryName: 'Form Auto-Fill',
         question: 'Years of React Native Experience (for portals)',
-        answer: "3.7"
+        answer: "4.0+"
       },
       {
         category: 'portal',
         categoryName: 'Form Auto-Fill',
         question: 'Years of React.js / Frontend Experience (for portals)',
-        answer: "3.7"
-      },
-      {
-        category: 'portal',
-        categoryName: 'Form Auto-Fill',
-        question: 'Years of Node.js / Backend Experience (for portals)',
-        answer: "3.7"
+        answer: "4.0+"
       },
       {
         category: 'portal',
@@ -2531,7 +2537,7 @@ Ramesh Seervi
         category: 'portal',
         categoryName: 'Form Auto-Fill',
         question: 'YoE in skills mentioned on TalentPromise (TP)',
-        answer: "React Native: 3.7+ Years\nReact.js: 3.7+ Years\nNode.js: 3.7+ Years\nJavaScript/TypeScript: 3.7+ Years"
+        answer: "Java & Spring Boot: 4+ Years\nMySQL & JPA/Hibernate: 4+ Years\nReact Native: 4+ Years\nReact.js: 4+ Years\nDocker & AWS: 3+ Years"
       },
       {
         category: 'portal',
@@ -2549,31 +2555,31 @@ Ramesh Seervi
         category: 'portal',
         categoryName: 'Form Auto-Fill',
         question: 'Seniority Level (L5/L6)',
-        answer: "L5 (Mid-to-Senior Engineer level. Capable of end-to-end frontend/backend ownership and performance tuning)."
+        answer: "L5 (Mid-to-Senior Engineer level. Capable of end-to-end backend microservices architecture, frontend/mobile ownership, and performance tuning)."
       },
       {
         category: 'portal',
         categoryName: 'Form Auto-Fill',
         question: 'Explain the product you are working on in your most recent company & your contribution to it.',
-        answer: "At Imcrinox, I developed key products:\n1. Organiser App: A workforce & event management tool for organizers. Built tickets scanners, notifications, speaker manager, wallet integrations, and role-based access.\n2. Ondeen App: Event booking platform. Integrated Apple/Google Pay, Google Maps, calendar views, and Node.js APIs.\nMy contribution: Migrated engine to Hermes, optimized FlatList rendering speed by 40% using memoization, and built scalable Express backend routes."
+        answer: "At Imcrinox, I developed key products:\n1. Ondeen: Event booking & management platform. Architected Java Spring Boot REST APIs, Spring Security JWT authentication, MySQL transactional models, and integrated React Native mobile client.\n2. UrExpert: Consultation platform built with Spring Boot, JPA/Hibernate, MySQL, and React.\n3. Organiser App: Workforce & event operations tool with real-time ticket scanning, wallet integrations, and role-based access control.\nMy contribution: Migrated engine to Hermes, optimized FlatList rendering speed by 40%, built high-throughput Spring Boot microservices, and Dockerized deployments."
       },
       {
         category: 'portal',
         categoryName: 'Form Auto-Fill',
         question: 'As a fullstack engineer, what is your backend : frontend split?',
-        answer: "Backend (Node.js/Express) 30% : Frontend (React Native & React.js) 70%"
+        answer: "Backend (Java Spring Boot, MySQL, Kafka, Docker) 60% : Frontend / Mobile (React.js & React Native) 40%"
       },
       {
         category: 'portal',
         categoryName: 'Form Auto-Fill',
         question: "Candidate's communication rating (Scale 1 to 5)",
-        answer: "4.5 / 5 (Strong professional verbal/written communication, experienced coordinating directly with product managers and developers)."
+        answer: "4.5 / 5 (Strong professional verbal/written communication, experienced coordinating directly with product managers, developers, and stakeholders)."
       },
       {
         category: 'portal',
         categoryName: 'Form Auto-Fill',
-        question: 'How many years of experience do you have in Python/Node?',
-        answer: "Node.js: 3.7+ Years\nPython: 0 Years (Stack focus is JavaScript/TypeScript, React, Node, Express, MongoDB)"
+        question: 'How many years of experience do you have in Java / Spring Boot?',
+        answer: "Java & Spring Boot: 4+ Years\nMySQL & JPA/Hibernate: 4+ Years\nKafka & Docker: 3+ Years"
       },
       {
         category: 'portal',
@@ -2609,19 +2615,43 @@ Ramesh Seervi
         category: 'portal',
         categoryName: 'Form Auto-Fill',
         question: 'Job Title (Current Designation)',
-        answer: "React Native & React.js Developer"
+        answer: "Java Spring Boot & Full Stack Developer"
       },
       {
         category: 'portal',
         categoryName: 'Form Auto-Fill',
         question: 'Job Description (Current Role Summary)',
-        answer: "Developed and deployed 4+ production React Native mobile applications for Android & iOS. Integrated RESTful APIs via Axios and Typescript, optimizing performance for user experience. Managed state using Redux Toolkit. Built Node.js and Express backend API routes. Managed store deployments to Google Play Store and Apple App Store."
+        answer: "Architected enterprise backend microservices using Java 17/21, Spring Boot 3.x, Spring Data JPA, Hibernate, MySQL, and Apache Kafka. Implemented stateless authentication using Spring Security and JWT. Deployed containerized applications with Docker and AWS. Built and deployed 4+ production React Native mobile applications for Android & iOS and dynamic React web frontends."
       },
       {
         category: 'portal',
         categoryName: 'Form Auto-Fill',
         question: 'Professional Skills (Comma-Separated for Portals)',
-        answer: "React Native, React.js, JavaScript, TypeScript, Node.js, Express.js, Redux, Redux Toolkit, Firebase, Axios, REST APIs, MongoDB, HTML5, CSS3, Git, Postman, Xcode, Android Studio"
+        answer: "Java 17, Spring Boot 3.x, Spring MVC, Spring Data JPA, Hibernate ORM, Spring Security, JWT, RESTful APIs, MySQL, Apache Kafka, Docker, Kubernetes, AWS, React.js, React Native, TypeScript, JavaScript, Redux Toolkit, Git, Postman, Maven"
+      },
+      {
+        category: 'java',
+        categoryName: 'Java & Spring Boot',
+        question: 'How do you design REST APIs in Spring Boot using Controller-Service-Repository architecture?',
+        answer: "I structure code in layers: @RestController handles HTTP mapping, input validation (@Valid), and DTO transformation; @Service encapsulates business logic, caching, and @Transactional boundaries; @Repository interfaces extend JpaRepository for type-safe database queries. DTOs and mappers decouple the internal entity model from the external API contract."
+      },
+      {
+        category: 'java',
+        categoryName: 'Java & Spring Boot',
+        question: 'How do you secure REST APIs using Spring Security and JWT?',
+        answer: "1. Configure SecurityFilterChain bean to disable CSRF for stateless APIs and set sessionCreationPolicy to STATELESS.\n2. Add a custom OncePerRequestFilter (JwtAuthenticationFilter) to extract the Bearer token, validate signature/expiration, and populate SecurityContextHolder with UsernamePasswordAuthenticationToken.\n3. Implement role-based access control (RBAC) using @PreAuthorize annotations on controller endpoints."
+      },
+      {
+        category: 'java',
+        categoryName: 'Java & Spring Boot',
+        question: 'How do you prevent the N+1 select problem in Spring Data JPA and Hibernate?',
+        answer: "By default, lazy-loaded associations fetch child entities with N separate queries. To prevent this:\n1. Use JOIN FETCH in JPQL queries to load parents and associations in a single query.\n2. Use @EntityGraph specifying attribute paths to fetch eagerly for specific repository methods.\n3. Configure BatchSize (@BatchSize) to fetch child collections in batches rather than 1-by-1."
+      },
+      {
+        category: 'java',
+        categoryName: 'Java & Spring Boot',
+        question: 'How do you integrate Apache Kafka in Spring Boot for asynchronous event processing?',
+        answer: "Configure KafkaTemplate<String, Object> for producers to publish JSON events to designated topics. For consumers, annotate listener methods with @KafkaListener(topics = '...', groupId = '...'). Configure Dead Letter Topics (DLT), deserialization error handlers, and retry templates to ensure robust error handling and message idempotency."
       },
       {
         category: 'rn',
